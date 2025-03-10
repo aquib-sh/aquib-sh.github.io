@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>https://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Aquib Shaikh</title>
+    <link>/</link>
+    <description>Recent content on Aquib Shaikh</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 09 Mar 2025 16:53:02 +0530</lastBuildDate>
-    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 09 Mar 2025 22:05:38 +0530</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Aquib Shaikh | Backend Engineer &amp; System Architect</title>
+      <link>/about-me/</link>
+      <pubDate>Sun, 09 Mar 2025 22:05:38 +0530</pubDate>
+      <guid>/about-me/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css&#34;&gt;&#xD;&#xA;&lt;link rel=&#34;stylesheet&#34; href=&#34;https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap&#34;&gt;&#xD;&#xA;&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/custom.css&#34;&gt;&#xD;&#xA;&lt;div class=&#34;profile-header&#34;&gt;&#xD;&#xA;    &lt;div class=&#34;profile-card&#34;&gt;&#xD;&#xA;        &lt;img src=&#34;/images/aquib2.jpg&#34; alt=&#34;Aquib Shaikh&#34; class=&#34;profile-img&#34;&gt;&#xD;&#xA;        &lt;h1&gt;Aquib Shaikh&lt;/h1&gt;&#xD;&#xA;        &lt;p class=&#34;subtitle&#34;&gt;Backend Engineer &amp; Microservices Architect&lt;/p&gt;&#xD;&#xA;        &lt;div class=&#34;profile-social&#34;&gt;&#xD;&#xA;            &lt;a href=&#34;https://linkedin.com/in/aquib-sh&#34; target=&#34;_blank&#34; aria-label=&#34;LinkedIn&#34;&gt;&lt;i class=&#34;fab fa-linkedin&#34;&gt;&lt;/i&gt;&lt;/a&gt;&#xD;&#xA;            &lt;a href=&#34;https://github.com/aquib-sh&#34; target=&#34;_blank&#34; aria-label=&#34;GitHub&#34;&gt;&lt;i class=&#34;fab fa-github&#34;&gt;&lt;/i&gt;&lt;/a&gt;&#xD;&#xA;            &lt;a href=&#34;https://twitter.com/aquib_sh&#34; target=&#34;_blank&#34; aria-label=&#34;Twitter&#34;&gt;&lt;i class=&#34;fab fa-twitter&#34;&gt;&lt;/i&gt;&lt;/a&gt;&#xD;&#xA;            &lt;a href=&#34;https://www.youtube.com/@aquibshaikh8611&#34; target=&#34;_blank&#34; aria-label=&#34;YouTube&#34;&gt;&lt;i class=&#34;fab fa-youtube&#34;&gt;&lt;/i&gt;&lt;/a&gt;&#xD;&#xA;        &lt;/div&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;    &lt;div class=&#34;contact-ribbon&#34;&gt;&#xD;&#xA;        &lt;a href=&#34;mailto:shaikhaquib394@gmail.com&#34; class=&#34;contact-btn&#34;&gt;&lt;i class=&#34;fas fa-envelope&#34;&gt;&lt;/i&gt; Let&#39;s Connect&lt;/a&gt;&#xD;&#xA;    &lt;/div&gt;&#xD;&#xA;&lt;/div&gt;&#xD;&#xA;&lt;h2&gt;&lt;i class=&#34;fas fa-code&#34;&gt;&lt;/i&gt; Engineering Scalable Backends&lt;/h2&gt;&#xD;&#xA;&lt;p class=&#34;intro-text&#34;&gt;&lt;strong&gt;Specialized in designing high-performance backend architectures&lt;/strong&gt; for fintech, enterprise systems, and distributed computing. With a deep focus on &lt;strong&gt;.NET Core, Python, and Go&lt;/strong&gt;, I build scalable platforms that power financial transactions, analytics, and automation.&lt;/p&gt;&#xD;&#xA;&lt;div class=&#34;grid-container&#34;&gt;&#xD;&#xA;    &lt;div&gt;&#xD;&#xA;        &lt;h3&gt;&lt;i class=&#34;fas fa-briefcase&#34;&gt;&lt;/i&gt; Professional Expertise&lt;/h3&gt;&#xD;&#xA;        &lt;h4&gt;Core Specialties&lt;/h4&gt;&#xD;&#xA;        &lt;ul class=&#34;feature-list&#34;&gt;&#xD;&#xA;            &lt;li&gt;&lt;i class=&#34;fas fa-network-wired&#34;&gt;&lt;/i&gt; Microservices &amp; API Gateways&lt;/li&gt;&#xD;&#xA;            &lt;li&gt;&lt;i class=&#34;fas fa-chart-line&#34;&gt;&lt;/i&gt; Scalable Fintech Solutions (SWIFT, TallySync, Bond Markets)&lt;/li&gt;&#xD;&#xA;            &lt;li&gt;&lt;i class=&#34;fas fa-shield-alt&#34;&gt;&lt;/i&gt; Secure Messaging (MT to MX Migration for Bond Markets, SWIFT Integration)&lt;/li&gt;&#xD;&#xA;        &lt;/ul&gt;&#xD;&#xA;        &lt;h4&gt;Notable Achievements&lt;/h4&gt;&#xD;&#xA;        &lt;div class=&#34;achievement-card&#34;&gt;&#xD;&#xA;            &lt;div class=&#34;achievement-icon&#34;&gt;&lt;i class=&#34;fas fa-rocket&#34;&gt;&lt;/i&gt;&lt;/div&gt;&#xD;&#xA;            &lt;div class=&#34;achievement-content&#34;&gt;&#xD;&#xA;                &lt;h3&gt;MT to MX Migration for Bond Markets&lt;/h3&gt;&#xD;&#xA;                &lt;p&gt;Led SWIFT messaging transformation for Mirae Asset Capital Markets, modernizing bond market transactions.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My First Post</title>
-      <link>https://example.org/posts/my-first-post/</link>
+      <link>/posts/my-first-post/</link>
       <pubDate>Sun, 09 Mar 2025 16:53:02 +0530</pubDate>
-      <guid>https://example.org/posts/my-first-post/</guid>
+      <guid>/posts/my-first-post/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;Aquib Shaikh&lt;/strong&gt;, and I am a &lt;em&gt;Software Engineer&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Visit &lt;a href=&#34;https://www.aquib.sh&#34;&gt;myblog&lt;/a&gt; website!&lt;/p&gt;&#xA;&lt;p&gt;Anyways&amp;hellip; here the post ends&lt;/p&gt;</description>
     </item>
   </channel>
