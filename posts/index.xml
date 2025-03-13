@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Aquib Shaikh</title>
-    <link>//localhost:1313/posts/</link>
+    <link>/posts/</link>
     <description>Recent content in Posts on Aquib Shaikh</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 09 Mar 2025 16:53:02 +0530</lastBuildDate>
-    <atom:link href="//localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Post</title>
-      <link>//localhost:1313/posts/my-first-post/</link>
+      <link>/posts/my-first-post/</link>
       <pubDate>Sun, 09 Mar 2025 16:53:02 +0530</pubDate>
-      <guid>//localhost:1313/posts/my-first-post/</guid>
+      <guid>/posts/my-first-post/</guid>
       <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;Aquib Shaikh&lt;/strong&gt;, and I am a &lt;em&gt;Software Engineer&lt;/em&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Visit &lt;a href=&#34;https://www.aquib.sh&#34;&gt;myblog&lt;/a&gt; website!&lt;/p&gt;&#xA;&lt;p&gt;Anyways&amp;hellip; here the post ends&lt;/p&gt;</description>
     </item>
   </channel>
