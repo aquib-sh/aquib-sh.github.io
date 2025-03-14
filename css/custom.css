@@ -145,7 +145,7 @@ body {
   align-items: center;
   text-align: center;
   padding: 4rem 1.5rem;
-  background-color: #f6f6f6; /* Ananke uses lighter backgrounds */
+  background-color: var(--secondary); /* Return to blue-tinted background */
   border-bottom: 1px solid var(--border);
   position: relative;
   overflow: hidden;
@@ -204,7 +204,7 @@ body {
   height: 48px;
   border-radius: 50%;
   background-color: var(--background);
-  color: #111; /* Changed from var(--primary) to dark gray */
+  color: var(--primary); /* Return to blue */
   font-size: 1.25rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 12px var(--shadow);
@@ -212,9 +212,9 @@ body {
 
 .profile-social a:hover {
   transform: translateY(-5px);
-  background-color: #111;
+  background-color: var(--primary);
   color: white;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(15, 98, 254, 0.3);
 }
 
 .contact-ribbon {
@@ -227,10 +227,10 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background-color: #111; /* Ananke-like black button */
+  background-color: var(--primary); /* Return to blue */
   color: white !important;
   padding: 0.75rem 1.5rem;
-  border-radius: 0; /* Ananke uses square buttons */
+  border-radius: 0; /* Keep Ananke's square buttons */
   font-weight: 500;
   transition: all 0.3s ease;
   text-decoration: none;
@@ -241,8 +241,8 @@ body {
 
 .contact-btn:hover,
 .cta-btn:hover {
-  opacity: 0.8;
-  background-color: #333;
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
 }
 
 /* --- Section Headers (Ananke-inspired) --- */
@@ -297,7 +297,7 @@ h1::after, h2::after {
 .beyond-section {
   background-color: #fff;
   padding: 2rem;
-  border-radius: 0; /* Ananke uses straight edges */
+  border-radius: 0; /* Keep Ananke's straight edges */
   box-shadow: 0 2px 4px var(--shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid #eee;
@@ -309,6 +309,7 @@ h1::after, h2::after {
 .beyond-section:hover {
   transform: translateY(-5px);
   box-shadow: 0 16px 32px var(--shadow);
+  border-color: var(--primary-light);
 }
 
 .expertise-section h3,
@@ -321,9 +322,9 @@ h1::after, h2::after {
   border-bottom: 1px solid #eee;
 }
 
-/* Icons in headings - changing color to match theme */
+/* Icons in headings - return to blue */
 h2 i, h3 i, h4 i {
-  color: #111; /* Changed from blue to black */
+  color: var(--primary);
   margin-right: 0.5rem;
 }
 
@@ -336,18 +337,19 @@ h2 i, h3 i, h4 i {
 }
 
 .skill-pill {
-  background: #f0f0f0; /* Changed from var(--accent) */
-  color: #333;
+  background: var(--accent);
+  color: var(--primary-dark);
   padding: 0.6rem 1.2rem;
-  border-radius: 0; /* Ananke-style straight edges */
+  border-radius: 0; /* Keep Ananke's straight edges */
   font-weight: 500;
   font-size: 0.9rem;
   transition: all 0.3s ease;
 }
 
 .skill-pill:hover {
-  background: #111;
+  background: var(--primary);
   color: white;
+  transform: translateY(-2px);
 }
 
 /* Feature Lists (Ananke-inspired) */
@@ -366,13 +368,13 @@ h2 i, h3 i, h4 i {
 
 .feature-list li i {
   margin-right: 0.75rem;
-  color: #111; /* Changed from var(--primary) to dark gray */
+  color: var(--primary); /* Return to blue */
 }
 
 /* Achievement Cards */
 .achievement-card {
   background: #fff;
-  border-radius: 0; /* Ananke-style straight edges */
+  border-radius: 0; /* Keep Ananke's straight edges */
   padding: 1.75rem;
   margin: 1.5rem 0;
   display: flex;
@@ -385,19 +387,20 @@ h2 i, h3 i, h4 i {
 .achievement-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 16px 32px var(--shadow);
+  border-color: var(--primary-light);
 }
 
 .achievement-icon {
   font-size: 1.75rem;
   margin-right: 1.5rem;
-  color: #111; /* Changed from var(--primary) to match theme */
-  background-color: #f0f0f0; /* Changed from var(--secondary) */
+  color: var(--primary); /* Return to blue */
+  background-color: var(--secondary);
   width: 56px;
   height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 0; /* Ananke-style straight edges */
+  border-radius: 0; /* Keep Ananke's straight edges */
 }
 
 .achievement-content h3 {
@@ -416,7 +419,7 @@ h2 i, h3 i, h4 i {
 .cta-section {
   text-align: center;
   padding: 4rem 2rem;
-  background-color: #111; /* Ananke-style black */
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
   margin: 4rem auto;
   max-width: 90rem;
   color: white;
@@ -447,25 +450,25 @@ h2 i, h3 i, h4 i {
 
 .cta-buttons .cta-btn {
   background-color: white;
-  color: #111 !important;
+  color: var(--primary) !important;
 }
 
 .cta-buttons .cta-btn:hover {
-  background-color: #f3f3f3;
+  background-color: var(--accent);
 }
 
 /* --- Footer --- */
 .site-footer {
   text-align: center;
   padding: 2rem;
-  background-color: #111; /* Ananke-style black */
+  background-color: #111; /* Keep Ananke's black footer */
   color: white;
   font-size: 0.9rem;
 }
 
 /* --- Links (Ananke-style) --- */
 a.highlight {
-  color: #111; /* Changed from var(--primary) */
+  color: var(--primary); /* Return to blue */
   text-decoration: none;
   border-bottom: 1px solid;
   padding-bottom: 1px;
