@@ -1,3 +1,26 @@
+# Jekyll generated files
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Sass/SCSS caching
+.sass-cache/
+
+# Ruby/Bundler files
+vendor/
+Gemfile.lock
+*.gem
+
+# Temporary files
+*.swp
+*~
+.DS_Store
+
+# Logs and local config
+*.log
+_config.local.yml
+
+
 # Logs
 logs
 *.log
