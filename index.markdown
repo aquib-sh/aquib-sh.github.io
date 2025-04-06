@@ -1,10 +1,14 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
 layout: home
 title: Aquib Shaikh - Backend Engineer
 ---
-Hi, I'm Aquib Shaikh, a Backend Engineer based in Mumbai, India. I specialize in building scalable, high-performance systems using .NET Core, Go, and Python. With experience in microservices, financial systems, and cloud infrastructure, I’m passionate about crafting elegant solutions that power real-world applications.
+# Hey There!
 
-[LinkedIn](https://linkedin.com/in/aquib-sh) | [GitHub](https://github.com/aquib-sh) | [Email](mailto:shaikhaquib394@gmail.com)
+I’m a Backend Engineer from Mumbai, India, passionate about crafting scalable, high-performance systems. With expertise in **.NET Core**, **Go**, and **Python**, I build microservices, optimize APIs, and tackle financial infrastructure challenges—like SWIFT messaging and low-latency transactions.
+
+Curious about my work? [Dive into my experience and skills](/about/) or check out my [blog](#) (coming soon!).
+
+## Connect
+- [LinkedIn](https://linkedin.com/in/aquib-sh)
+- [GitHub](https://github.com/aquib-sh)
+- [Email](mailto:shaikhaquib394@gmail.com)

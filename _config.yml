@@ -36,7 +36,6 @@ theme: minima
 plugins:
   - jekyll-feed
 
-
 defaults:
   - scope:
       path: ""
@@ -44,6 +43,10 @@ defaults:
     values:
       layout: "post"
       categories: ["technical", "personal"]
+
+header_pages:
+  - index.markdown
+  - about.markdown
 
 
 #description: >- # this means to ignore newlines until "baseurl:"
