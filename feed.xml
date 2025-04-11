@@ -1,17 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aquib.sh/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aquib.sh/" rel="alternate" type="text/html" /><updated>2025-04-07T13:39:24+00:00</updated><id>https://aquib.sh/feed.xml</id><title type="html">Aquib Shaikh</title><subtitle>Backend Engineer | .NET, Python, Go | Microservices &amp; High-Performance APIs</subtitle><author><name>Aquib Shaikh</name></author><entry><title type="html">Welcome to Jekyll!</title><link href="https://aquib.sh/technical/personal/jekyll/update/2025/04/06/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2025-04-06T12:16:00+00:00</published><updated>2025-04-06T12:16:00+00:00</updated><id>https://aquib.sh/technical/personal/jekyll/update/2025/04/06/welcome-to-jekyll</id><content type="html" xml:base="https://aquib.sh/technical/personal/jekyll/update/2025/04/06/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aquib.sh/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aquib.sh/" rel="alternate" type="text/html" /><updated>2025-04-11T09:43:44+00:00</updated><id>https://aquib.sh/feed.xml</id><title type="html">Aquib Shaikh</title><subtitle>Backend Engineer | .NET, Python, Go | Microservices &amp; High-Performance APIs</subtitle><author><name>Aquib Shaikh</name></author><entry><title type="html">Fix for WhatsApp PDF Warning: ‘This Document Might Be Harmful for Your Device’</title><link href="https://aquib.sh/2025/04/my-latex-setup.html" rel="alternate" type="text/html" title="Fix for WhatsApp PDF Warning: ‘This Document Might Be Harmful for Your Device’" /><published>2025-04-11T00:00:00+00:00</published><updated>2025-04-11T00:00:00+00:00</updated><id>https://aquib.sh/2025/04/my-latex-setup</id><content type="html" xml:base="https://aquib.sh/2025/04/my-latex-setup.html"><![CDATA[<p>We all love LaTeX (at least I do!).<br />
+It helps me create and edit my resume without making a mess.<br />
+What’s better? I can maintain it in Git—create branches, roll back if needed—way better than fiddling with Word documents.<br />
+I can even send it to GPT for a review.
+in.</p>
 
-<p>Jekyll requires blog post files to be named according to the following format:</p>
+<p>Have you ever sent a PDF via WhatsApp and seen this warning?</p>
 
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+<blockquote>
+  <p><strong>This document might be harmful for your device. Make sure you trust the sender before you open it.</strong></p>
+</blockquote>
 
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p>This happened to me when I sent my resume, generated on <strong>Overleaf</strong>, to a hiring manager. It was a clean file—no malware, no scripts—but WhatsApp flagged it anyway.<br />
+Apparently, Overleaf PDFs trigger something in WhatsApp’s automated filters.</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<p>I found a temporary workaround using Google Docs, but it wasn’t a clean or dependable fix for this. That’s when I decided to move away from Overleaf and build a local LaTeX setup that wouldn’t trigger warnings—and would give me more control in the long run.</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<p><strong>In this post, I’ll share my LaTeX setup and how switching to a local compiler solved the issue.</strong></p>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name>Aquib Shaikh</name></author><category term="technical" /><category term="personal" /><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">InitialPost</title><link href="https://aquib.sh/2025/04/init.html" rel="alternate" type="text/html" title="InitialPost" /><published>2025-04-06T00:00:00+00:00</published><updated>2025-04-06T00:00:00+00:00</updated><id>https://aquib.sh/2025/04/init</id><content type="html" xml:base="https://aquib.sh/2025/04/init.html"><![CDATA[<p>This is my first post! I’ll be sharing insights on backend engineering, microservices, and more. Stay tuned!</p>]]></content><author><name>Aquib Shaikh</name></author><category term="technical" /><category term="personal" /><category term="Technical" /><category term="Backend" /><category term="golang" /><category term="microservices" /><category term="api-design" /><summary type="html"><![CDATA[This is my first post! I’ll be sharing insights on backend engineering, microservices, and more. Stay tuned!]]></summary></entry></feed>
+<hr />
+<p><br /></p>
+
+<h2 id="my-local-latex-setup-ubuntu">My Local LaTeX Setup (Ubuntu)</h2>
+
+<p>I use <strong>Ubuntu</strong>, so the commands and package names below might vary depending on your OS or distro.<br />
+Here’s what I use:</p>
+
+<ul>
+  <li><strong>LaTeX Engine</strong>: <code class="language-plaintext highlighter-rouge">texlive-full</code> with <code class="language-plaintext highlighter-rouge">pdflatex</code></li>
+  <li><strong>Editor</strong>: Mostly <strong>VIM</strong>, sometimes <strong>VS Code</strong> with the <em>LaTeX Workshop</em> extension</li>
+</ul>
+
+<hr />
+<p><br /></p>
+
+<h2 id="installation">Installation</h2>
+
+<p>There are many packages available for compiling LaTeX to PDF, but I found this one to be the most reliable and comprehensive.<br />
+Other minimal packages often miss important dependencies like color packages, styles, and fonts—which you’ll likely need anyway.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>texlive-full pdflatex
+</code></pre></div></div>
+
+<blockquote>
+  <p>⚠️ <strong>Note:</strong> This package is big—around a gigabyte—but it’ll save you a ton of headache later by including everything you might need.</p>
+</blockquote>
+
+<hr />
+<p><br /></p>
+
+<h2 id="usage">Usage</h2>
+
+<p>To compile a <code class="language-plaintext highlighter-rouge">.tex</code> file to PDF, use the command below:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pdflatex filename.tex
+</code></pre></div></div>
+<p>This command creates a filename.pdf and a .log file with detailed output.
+Unlike the Overleaf version, this locally compiled PDF no longer triggers WhatsApp’s “This document might be harmful” warning. 🎉</p>]]></content><author><name>Aquib Shaikh</name></author><category term="technical" /><category term="personal" /><category term="Technical" /><category term="Setup" /><category term="personal" /><category term="latex" /><category term="productivity" /><category term="overleaf" /><category term="whatsapp" /><category term="resume" /><category term="pdf" /><summary type="html"><![CDATA[If WhatsApp shows 'This document might be harmful for your device' when you send a PDF made on Overleaf, here's why I switched to a local LaTeX setup—and how you can too.]]></summary></entry></feed>
