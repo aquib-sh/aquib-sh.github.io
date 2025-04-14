@@ -225,6 +225,29 @@ After our defensive check, now it finally allocates the memory for our new list 
 ```
 
 Here, we observe something interesting, there is a check for null value, in what would this `list_new_prealloc` function return a **NULL** value??
+As we can see in the below function snippets if our `output_size` is negative then it results in returning of NULL.
 
-Let's Explore!
+```c
+static PyObject *
+list_new_prealloc(Py_ssize_t size)
+{
+    assert(size > 0);
+    PyListObject *op = (PyListObject *) PyList_New(0);
+    if (op == NULL) {
+        return NULL;
+    }
+    ...
+}
+
+PyObject *
+PyList_New(Py_ssize_t size)
+{
+    if (size < 0) {
+        PyErr_BadInternalCall();
+        return NULL;
+    }
+    ...
+}
+```
+
 
