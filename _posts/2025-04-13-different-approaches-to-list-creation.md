@@ -1,18 +1,25 @@
 ---
-title: Difference between '[[]] * 10' and '[[] for _ in range(10)]' in Python.
-date: 2025-04-13
-categories: [Technical]
-tags: [python]
+title: "Understanding the Difference Between '[[]] * 10' and '[[] for _ in range(10)]' in Python"
+date: 2025-04-18
+categories: [Technical, Python, Programming]
+tags: [python, cpython, data structures, list operations, python internals, memory management, reference counting]
 permalink: /:year/:month/:title.html
-description: "What does this two python list creation method do at the fundamental level? we will explore this in this article by deep diving into cpython codebase!"
+description: "A deep dive into Python's list creation mechanics: explore how multiplication creates shared references while list comprehensions create independent objects by examining the actual CPython implementation code."
+image: /assets/img/python-list-references.png 
+author: Aquib Shaikh 
+toc: true
+comments: true
 ---
 
-## Context
-I have a habit of avoiding syntactic sugars of python unless absolutely necessary or if I am feeling lazy!
-It's not like I have a bad opinion of them. I think some of them are highly optimized which could help you leverage the unique features and efficiency of Python where it matters.
+## Python List Multiplication: Not What You'd Expect
 
-Recently I was writing a script where I decided to use this syntactic sugar of python which I assumed would create a list of lists. 
-Well to be fair it does.
+I have a habit of avoiding syntactic sugars of Python unless absolutely necessary or if I'm feeling lazy! It's not like I have a bad opinion of them. I think some of them are highly optimized which could help you leverage the unique features and efficiency of Python where it matters.
+
+Recently I was writing a script where I decided to use this syntactic sugar of Python which I assumed would create a list of lists. Well, to be fair, it does... just not in the way I expected.
+
+## Expected vs. Actual Results
+
+Let's look at this seemingly innocent piece of code:
 
 ```python
 list_of_lists = [[]] * 10
@@ -20,20 +27,21 @@ list_of_lists[0].append(1)
 print(list_of_lists)
 ```
 
-### Expected
-I assumed that the above code would result into the first sublist having a single element appended to it like
+### What I Expected
+
+I assumed that the above code would result in the first sublist having a single element appended to it like:
 ```python
-[[10], [], [], [], [], [], [], [], [], []]
+[[1], [], [], [], [], [], [], [], [], []]
 ```
 
-### Actual Result
-But to my surpirise it resulted in this
+### What Actually Happened
+
+But to my surprise, it resulted in this:
 ```python
-[[10], [10], [10], [10], [10], [10], [10], [10], [10], [10]]
+[[1], [1], [1], [1], [1], [1], [1], [1], [1], [1]]
 ```
 
-Well it was into a subroutine which was doing many other things, so it took me a while but it was not long before I figured out that all of this lists pointed to a single memory address. As verified by the below routine.
-
+Well, it was in a subroutine which was doing many other things, so it took me a while, but it was not long before I figured out that all of these lists pointed to a single memory address. As verified by the following:
 
 ```python
 >>> register = [[]] * 10
@@ -52,14 +60,14 @@ Well it was into a subroutine which was doing many other things, so it took me a
 1728395547200
 ```
 
-It all made sense, But I had this itch to see how it was really implemented under the hood. 
-So I did what any productivity guru and pragmatic person would tell you do,<br/> 
+It all made sense, but I had this itch to see how it was really implemented under the hood. So I did what any productivity guru and pragmatic person would tell you to do:<br/> 
 Checkout the Python Interpreter Source Code 😤
 
-## Implementation
-I head over to the [cpython repo](https://github.com/python/cpython) on GitHub
+## Diving into the CPython Codebase
 
-In CPython the below two method in `listobject.c` file that are responsible for creating the list when you write the list multiplication syntax like `[[]] * 10`
+I headed over to the [cpython repo](https://github.com/python/cpython) on GitHub to investigate how list multiplication actually works.
+
+In CPython, there are two methods in `listobject.c` that are responsible for creating the list when you write the list multiplication syntax like `[[]] * 10`.
 
 ```c
 static PyObject *
@@ -116,46 +124,44 @@ list_repeat(PyObject *aa, Py_ssize_t n)
 }
 ```
 
-Okay, enough of Egyptian Hyerogliphics, let's come to the point.
-What is it actually doing?
+## Breaking Down the Implementation
 
-When evaluating `[[]] * 10` *list_repeat* function is called.
+Okay, enough of Egyptian Hieroglyphics, let's come to the point. What is it actually doing?
+
+When evaluating `[[]] * 10`, the `list_repeat` function is called.
 Here,
-*PyObject \*aa* = `[]` 
-*Py_ssize_t n* = 10
+- `PyObject *aa` = `[[]]` (our list containing one empty list)
+- `Py_ssize_t n` = 10 (our multiplier)
 
+First, we initialize our return value and typecast the input:
 ```c
 PyObject *ret;
 PyListObject *a = (PyListObject *)aa;
 ```
 - This declares a new `PyObject` for returning
-- Creates a `PyListObject` and typecasts the existing `*aa` parameter to `PyListObject` that is our `[]` in this case
+- Creates a `PyListObject` and typecasts the existing `*aa` parameter to `PyListObject`
 
-Now we come to the part where it calls the `list_repeat_lock_held` function for creating the list by passing these two parameters
-
-- our object reference `a` which ultimately is a pointer to `aa`
-- the multiplier number (In our case it's 10)
-
+Next, we call the actual implementation:
 ```c
 ret = list_repeat_lock_held(a, n);
 ```
 
----
+## Inside the list_repeat_lock_held Function
+
+### Initial Checks and Memory Allocation
 
 ```c
-    const Py_ssize_t input_size = Py_SIZE(a);
-    if (input_size == 0 || n <= 0)
-        return PyList_New(0);
-    assert(n > 0);
+const Py_ssize_t input_size = Py_SIZE(a);
+if (input_size == 0 || n <= 0)
+    return PyList_New(0);
+assert(n > 0);
 ```
 
-In this we assess the size of current list object that we created. 
-If the size of our list is 0 or the multiplier is less than equal to zero then we just return an empty list
+First, we determine the size of our input list. If the size is 0 or the multiplier is less than or equal to zero, we just return an empty list.
 
-Which basically means,
-If you had for example performed `[] * 10` or `[[]] * 0` or `[[]] * -29` the result would be `[]`
+This means if you had performed `[] * 10` or `[[]] * 0` or `[[]] * -29`, the result would be `[]`.
 
-Don't belive me? Let's put it to test!
+Let's verify:
 
 ```python
 >>> [] * 10
@@ -170,62 +176,26 @@ Don't belive me? Let's put it to test!
 []
 ```
 
-As you can see, as expected we got a single newly created python list of length 0
+Indeed, we get a single newly created Python list of length 0!
 
-Next, It needs to allocate memory for our new list<br/>
-But before it does that<br/>
-we have a defensive check to prevent integer overflow
+Next, we have a defensive check to prevent integer overflow:
 ```c
-    if (input_size > PY_SSIZE_T_MAX / n)
-        return PyErr_NoMemory();
-    Py_ssize_t output_size = input_size * n;
+if (input_size > PY_SSIZE_T_MAX / n)
+    return PyErr_NoMemory();
+Py_ssize_t output_size = input_size * n;
 ```
 
-Here, `PY_SSIZE_T_MAX` is the max value of a `long int` 
+Here, `PY_SSIZE_T_MAX` is the max value of a `long int`, which is typically 9,223,372,036,854,775,807 on a 64-bit machine.
 
-You can verify it in C through `limits.h` using below snippet
-```c
-#include <stdio.h>
-#include <limits.h>
-
-int main() 
-{
-    printf("The max size of a long is : %ld\n", LONG_MAX); 
-}
-
-// outputs
-// The max size of a long is : 9223372036854775807
-```
-
-OR in Python using `sys.maxsize` from `sys` module 
-
-```python
->>> import sys
->>> sys.maxsize
-9223372036854775807
-```
-
-This should mean if I tring 
-
-Now the actual size might differ based on your CPU architecture, if you are using a 64-bit machine then it would likely be the same as I have shown.
-
-For more details, you can also check it's C implementation in [sysmodule.c](https://github.com/python/cpython/blob/9e52c907b5511393ab7e44321e9521fe0967e34d/Python/sysmodule.c#L1985-L1986)
-
-Trying, not to get too nerdy here...<br/>
-Let's stick to our original topic, I might create a seperate article on how python's `sys` module is written in C.
-
-After our defensive check, now it finally allocates the memory for our new list object
+After our defensive check, now it's time to allocate memory for our new list object:
 
 ```c
-    Py_ssize_t output_size = input_size * n;
-
-    PyListObject *np = (PyListObject *) list_new_prealloc(output_size);
-    if (np == NULL)
-        return NULL;
+PyListObject *np = (PyListObject *) list_new_prealloc(output_size);
+if (np == NULL)
+    return NULL;
 ```
 
-Here, we observe something interesting, there is a check for null value, in what would this `list_new_prealloc` function return a **NULL** value??
-As we can see in the below function snippets if our `output_size` is negative then it results in returning of NULL.
+The `list_new_prealloc` function might return NULL if our `output_size` is negative:
 
 ```c
 static PyObject *
@@ -250,56 +220,57 @@ PyList_New(Py_ssize_t size)
 }
 ```
 
-Now we come to the main part where the list is actually made and returned to the user
+## The Critical Part: How Python Copies the References
+
+Now we come to the main part where the list is actually made and returned to the user:
 
 ```c
-    PyObject **dest = np->ob_item;
-    if (input_size == 1) {
-
-        PyObject *elem = a->ob_item[0];
-        _Py_RefcntAdd(elem, n);
-        PyObject **dest_end = dest + output_size;
-        while (dest < dest_end) {
-            *dest++ = elem;
-        }
+PyObject **dest = np->ob_item;
+if (input_size == 1) {
+    // Single element list case
+    PyObject *elem = a->ob_item[0];
+    _Py_RefcntAdd(elem, n);
+    PyObject **dest_end = dest + output_size;
+    while (dest < dest_end) {
+        *dest++ = elem;
     }
-    else {
-        PyObject **src = a->ob_item;
-        PyObject **src_end = src + input_size;
-        while (src < src_end) {
-            _Py_RefcntAdd(*src, n);
-            *dest++ = *src++;
-        }
-        // TODO: _Py_memory_repeat calls are not safe for shared lists in
-        // GIL_DISABLED builds. (See issue #129069)
-        _Py_memory_repeat((char *)np->ob_item, sizeof(PyObject *)*output_size,
-                                        sizeof(PyObject *)*input_size);
-    }
-
-    Py_SET_SIZE(np, output_size);
-    return (PyObject *) np;
+}
+else {
+    // Multi-element list case
+    ...
+}
 ```
-### Single element list
-Here we see if the list size is one element 
-Then it explictly  only gets the first element inside of it and then keeps adding it into the array until it reach the output size.
 
-(**Remember** the list size is the size of list object *PyListObject *a* which we passed into the parameter.)
+### The Single Element List Case (Our [[]] * 10 Example)
 
-Let's see how this is being done.
+Since our list `[[]]` has only one element (which is the empty list `[]`), we enter the `input_size == 1` branch:
+
 ```c
-        PyObject *elem = a->ob_item[0];
-        _Py_RefcntAdd(elem, n);
-        PyObject **dest_end = dest + output_size;
-        while (dest < dest_end) {
-            *dest++ = elem;
-        }
+PyObject *elem = a->ob_item[0];
+_Py_RefcntAdd(elem, n);
+PyObject **dest_end = dest + output_size;
+while (dest < dest_end) {
+    *dest++ = elem;
+}
 ```
-1. We select the first element of the list (remember it's a one element list), We can also say that `*elem* is the pointer to the 1st element of the list.
-2. We use `_Py_RefcntAdd(elem, n);` to increase the number of references associated with that object, 
-Now this is an interesting one, In Python every object (PyObject) internally has an unsigned 32-bit integer property `ob_refcnt` to track how many references are tied to this particular object, 
-for example, I have an object `snow_bell` of `Cat` class instance, Now `snow_bell` can be a inside a list with his friendly neighbourhood cats, a dictionary, another class. So each time a new data structure points to it, Python internally increases this count. If ever the count reaches to `0` then the object is marked for garbage collection so that Python can free up the memory. In Python we also have something called `Immortal Objects` that are never garbage collected like `None`, `True` and a seemingly normal object can rise to the level of `Immortal` under some conditions. But that's the topic for another article, You can read the source code of `_Py_RefcntAdd` to dig deeper.
 
-You can also check it using below code in Python shell
+Let's break down what's happening:
+
+1. We select the first element of the list: `elem = a->ob_item[0]` (this is our `[]` empty list)
+2. We increase the reference count of this element by n (10 in our case): `_Py_RefcntAdd(elem, n)`
+3. We calculate the end pointer for our destination array: `dest_end = dest + output_size`
+4. We run a simple loop that copies the **same reference** to each position in our new list
+
+This is the key insight! The function doesn't create 10 new empty lists - it creates one new list with 10 slots, and puts **the same empty list reference** in each slot!
+
+## Python's Reference Counting System
+
+Let's take a small detour to understand reference counting in Python, as it's crucial to understanding what's happening here.
+
+In Python, every object (PyObject) internally has an unsigned 32-bit integer property `ob_refcnt` to track how many references are tied to this particular object.
+
+For example, if I have an object `snow_bell` of `Cat` class:
+
 ```python
 >>> class Cat:
 ...     def __init__(self, name):
@@ -311,97 +282,41 @@ You can also check it using below code in Python shell
 >>> sys.getrefcount(snow_bell)
 2
 ```
-`sys.getrefcount` functions gives us the internal reference count of an object. The reason why it says `2` count because firstly we have a reference `snow_bell` variable which itself is also just a pointer to that memory address and secondly to get the count, `getrefcount` function itself creates a temporary pointer to the object, this results in one additional pointer. 
 
-3. Now we are essentially calculating the last memory address of the list. We already had the start pointer of the list when we created a pointer to the first element of the list.
+`sys.getrefcount` shows us the internal reference count of an object. It says `2` because:
+1. We have the reference `snow_bell` variable
+2. The `getrefcount` function itself creates a temporary reference to the object
+
+When the reference count reaches `0`, the object is marked for garbage collection.
+
+## Back to Our List Multiplication
+
+So when we run `[[]] * 10`, what happens is:
+1. We create one empty list `[]`
+2. We put that same list reference in 10 different slots of our new list
+3. When we modify `list_of_lists[0]`, we're modifying the same list object that all 10 slots refer to!
+
+## The Multi-Element List Case
+
+For completeness, let's examine what happens with multiple elements. For example, `[[10], [20]] * 10`:
+
 ```c
-    PyObject **dest = np->ob_item[0]; 
+PyObject **src = a->ob_item;
+PyObject **src_end = src + input_size;
+while (src < src_end) {
+    _Py_RefcntAdd(*src, n);
+    *dest++ = *src++;
+}
+_Py_memory_repeat((char *)np->ob_item, sizeof(PyObject *)*output_size, sizeof(PyObject *)*input_size);
 ```
 
-Now when we have to calculate the supposed last memory address of the array after we finish up operation we can simply add that size into our existing address.
-```c
-        PyObject **dest_end = dest + output_size;
-```
-So essentially when we are doing `dest + output_size` the compiler is essentially calculating the last element memory address, this might look sort of deceiving because we aren't explictly specifying the size of Python object, in explicit terms we should be adding `output_size * sizeof(PyObject)` to the `dest`. But the compiler takes care of that and does the appropirate arithmetic for calculating.
+In this case:
+1. The function first copies references to `[10]` and `[20]` into the first two slots of our new list
+2. It then uses `_Py_memory_repeat` to efficiently duplicate these references throughout the rest of the list
 
-4. Now we run a damn simple while loop to copy the same memory reference on our entire array until we reach our new memory location `dest_end`
-```c
-        while (dest < dest_end) {
-            *dest++ = elem;
-        }
-```
-
-### Multi element list
-To recap, earlier before entering this conditional. 
-
-We had already calcualted `output_size` that is the size of output list we will create and also preallocated the required memory in for our `PyListObject` that we will be sending back.
+The `_Py_memory_repeat` function is particularly clever - it doubles the copied region in each iteration, making it logarithmically efficient:
 
 ```c
-    Py_ssize_t output_size = input_size * n;
-    PyListObject *np = (PyListObject *) list_new_prealloc(output_size);
-    if (np == NULL)
-        return NULL;
-```
-
-this was our `dest`, which is essentially the pointer to our python list
-```c
-    PyObject **dest = np->ob_item;
-```
-
-Now we come to the part where where our source list has multiple elements
-
-```c
-        PyObject **src = a->ob_item;
-        PyObject **src_end = src + input_size;
-        while (src < src_end) {
-            _Py_RefcntAdd(*src, n);
-            *dest++ = *src++;
-        }
-        // TODO: _Py_memory_repeat calls are not safe for shared lists in
-        // GIL_DISABLED builds. (See issue #129069)
-        _Py_memory_repeat((char *)np->ob_item, sizeof(PyObject *)*output_size, sizeof(PyObject *)*input_size);
-```
-
-Let's take the below example
-The line to interpret is `[[10], [20]] * 10`
-
-The input list is [[10], [20]], and the multiplier is 10. This means:
-•	Input size (input_size): 2 (the number of elements in the input list).
-•	Output size (output_size): input_size * n = 2 * 10 = 20.
-The function list_repeat_lock_held is called with:
-•	a: The input list [[10], [20]].
-•	n: The multiplier 10.
-
-•	src: Points to the start of the input list ([[10], [20]]).
-•	src_end: Points to the end of the input list (src + input_size).
-
-**Iteration 1**:
-•	*src points to [10].
-•	_Py_RefcntAdd(*src, n) increments the reference count of [10] by 10.
-•	*dest = *src copies the reference to [10] into the output list.
-•	src and dest are incremented.
-
-**Iteration 2**:
-•	*src points to [20].
-•	_Py_RefcntAdd(*src, n) increments the reference count of [20] by 10.
-•	*dest = *src copies the reference to [20] into the output list.
-•	src and dest are incremented.
-
-At the end of this loop:
-•	The first 2 slots of np->ob_item contain references to [10] and [20].
-•	The remaining 18 slots are still NULL.
-
-**Repeat References Using _Py_memory_repeat**
-```c
-_Py_memory_repeat((char *)np->ob_item, sizeof(PyObject *) * output_size, sizeof(PyObject *) * input_size);
-```
-
-•	dest: The memory region starting at np->ob_item.
-•	len_dest: sizeof(PyObject *) * output_size = sizeof(PyObject *) * 20.
-•	len_src: sizeof(PyObject *) * input_size = sizeof(PyObject *) * 2.
-
-```c
-// Repeat the bytes of a buffer in place
 static inline void
 _Py_memory_repeat(char* dest, Py_ssize_t len_dest, Py_ssize_t len_src)
 {
@@ -415,24 +330,16 @@ _Py_memory_repeat(char* dest, Py_ssize_t len_dest, Py_ssize_t len_src)
 }
 ```
 
-_Py_memory_repeat efficiently repeats a block of memory (like references to list elements) to fill a larger memory region. Here's what it does:
-1.	It starts with a memory region (dest) that already contains the first len_src bytes (example: references to the input list elements).
-2.	Doubling Strategy: In each iteration, it doubles the size of the copied region by copying the already-copied portion of dest to the next available position.
-3.	It ensures that no more than len_dest bytes are written by calculating the smaller of the remaining space (len_dest - copied) and the size of the already-copied region (copied).
-4.	Logarithmic Efficiency: The function repeats the memory in logarithmic steps, minimizing the number of memcpy calls.
-This is used in list repetition (e.g., [[10], [20]] * 10) to efficiently duplicate references to the input list elements in the output list.
-•	_Py_memory_repeat doubles the copied region in each iteration, making it logarithmically efficient.
+## So What About [[] for _ in range(10)]?
 
+In case you're wondering why I didn't touch on the `[[] for _ in range(10)]` approach - well, when I started writing this article, I kept digging deeper and deeper into the amazing mechanics of the Python interpreter. It was as much of an adventure for me as it has been for you!
 
-So here my friends, how a simple `[[10],[20]] * 10` does behind the hood in a single functions, This is apart from the things that numerous other modules of Python Interpreter take care of that even I haven't fully explored. 
+I realized that the article is already too long, so our list comprehension approach deserves its own separate article. The key difference though? In list comprehension, each iteration creates a NEW empty list, rather than referencing the same one multiple times.
+
+## Conclusion
+
+So there you have it - a deep dive into how Python's list multiplication works under the hood. The next time you use `[[]] * 10`, you'll know exactly what's happening and why modifying one sublist affects all of them!
 
 Enjoy your Coffee ☕
 
-
-In case you are wondering why didn't I touch on the `[[] for _ in range(10)]` approach,
-Well when I started writing this article, I kept digging deeper and deeper into the amazing mechanics of Python interpreter,
-It was as much of an adventure for me as it has been to you.
-I realised that the article is already too long, so our range approach deserves it's own separate article.
-
-Let me know what you thought about this article,
-Would love to know your opinions.. Feel free to reachout via email.
+Let me know what you thought about this article. Would love to know your opinions... Feel free to reach out via email.
