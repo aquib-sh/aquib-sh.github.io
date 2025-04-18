@@ -427,3 +427,12 @@ This is used in list repetition (e.g., [[10], [20]] * 10) to efficiently duplica
 So here my friends, how a simple `[[10],[20]] * 10` does behind the hood in a single functions, This is apart from the things that numerous other modules of Python Interpreter take care of that even I haven't fully explored. 
 
 Enjoy your Coffee ☕
+
+
+In case you are wondering why didn't I touch on the `[[] for _ in range(10)]` approach,
+Well when I started writing this article, I kept digging deeper and deeper into the amazing mechanics of Python interpreter,
+It was as much of an adventure for me as it has been to you.
+I realised that the article is already too long, so our range approach deserves it's own separate article.
+
+Let me know what you thought about this article,
+Would love to know your opinions.. Feel free to reachout via email.
