@@ -1,15 +1,16 @@
 ---
-title: "Understanding the Difference Between '[[]] * 10' and '[[] for _ in range(10)]' in Python"
+title: "What Python’s [[]] * 10 Really Does: A CPython Deep Dive"
 date: 2025-04-18
 categories: [Technical, Python, Programming]
-tags: [python, cpython, data structures, list operations, python internals, memory management, reference counting]
+tags: [python, cpython, data structures, list operations, python internals, memory management, reference counting, python pitfalls]
 permalink: /:year/:month/:title.html
 description: "A deep dive into Python's list creation mechanics: explore how multiplication creates shared references while list comprehensions create independent objects by examining the actual CPython implementation code."
-image: /assets/img/python-list-references.png 
 author: Aquib Shaikh 
 toc: true
 comments: true
 ---
+
+<img src="/assets/images/python-list-references.png" alt="Article image" width="400" height="300" />
 
 ## Python List Multiplication: Not What You'd Expect
 
@@ -287,7 +288,14 @@ For example, if I have an object `snow_bell` of `Cat` class:
 1. We have the reference `snow_bell` variable
 2. The `getrefcount` function itself creates a temporary reference to the object
 
-When the reference count reaches `0`, the object is marked for garbage collection.
+When the reference count reaches `0`, the object is garbage collected.
+
+> **Did you know?**
+> 
+> In Python, some objects are *immortal* — they’re never garbage collected. This includes `None`, `True`, and `False`. Interestingly, under certain conditions, even a seemingly ordinary object can become immortal.
+> 
+> If you're curious, check out the source code of `_Py_RefcntAdd` to dig deeper. But that’s a topic for another article.
+
 
 ## Back to Our List Multiplication
 
@@ -329,6 +337,15 @@ _Py_memory_repeat(char* dest, Py_ssize_t len_dest, Py_ssize_t len_src)
     }
 }
 ```
+1. The variable `copied` tracks how many bytes of repeated content have already been written. It starts at `len_src`, the length of the original pattern.
+
+2. `bytes_to_copy` is calculated using `Py_MIN(copied, len_dest - copied)`. Ideally, you'd like to double the data by copying `copied` bytes, but if that would go beyond the destination buffer, it's capped at the remaining space.
+
+3. The actual copying happens with `memcpy(dest + copied, dest, bytes_to_copy)`. This means you're copying from the beginning of `dest` (which already contains some repeated pattern) and appending it to the end of the currently copied region. This effectively doubles the region that now holds the repeated content.
+
+4. After copying, `copied` is incremented by `bytes_to_copy`, and the loop continues until the entire buffer is filled.
+
+This approach is clever because it builds on the already-copied data. Instead of repeatedly copying from the original source, it uses the growing buffer itself to continue the repetition. The number of copied bytes grows like this: `len_src -> 2*len_src -> 4*len_src -> ...`, until the full destination length is reached.
 
 ## So What About [[] for _ in range(10)]?
 
