@@ -186,7 +186,14 @@ if (input_size > PY_SSIZE_T_MAX / n)
 Py_ssize_t output_size = input_size * n;
 ```
 
-Here, `PY_SSIZE_T_MAX` is the max value of a `long int`, which is typically 9,223,372,036,854,775,807 on a 64-bit machine.
+Here, `PY_SSIZE_T_MAX` is the max value of a `long int`, which is typically 9223372036854775807 on a 64-bit machine.
+
+The same is accesible through `sys.maxsize` in Python.
+```python
+>>> import sys
+>>> sys.maxsize
+9223372036854775807
+```
 
 After our defensive check, now it's time to allocate memory for our new list object:
 
