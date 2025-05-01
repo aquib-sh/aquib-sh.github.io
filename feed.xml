@@ -1,4 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aquib.sh/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aquib.sh/" rel="alternate" type="text/html" /><updated>2025-04-18T18:57:34+00:00</updated><id>https://aquib.sh/feed.xml</id><title type="html">Aquib Shaikh</title><subtitle>Backend Engineer | .NET, Python, Go | Microservices &amp; High-Performance APIs</subtitle><author><name>Aquib Shaikh</name></author><entry><title type="html">What Python’s [[]] * 10 Really Does: A CPython Deep Dive</title><link href="https://aquib.sh/2025/04/different-approaches-to-list-creation.html" rel="alternate" type="text/html" title="What Python’s [[]] * 10 Really Does: A CPython Deep Dive" /><published>2025-04-18T00:00:00+00:00</published><updated>2025-04-18T00:00:00+00:00</updated><id>https://aquib.sh/2025/04/different-approaches-to-list-creation</id><content type="html" xml:base="https://aquib.sh/2025/04/different-approaches-to-list-creation.html"><![CDATA[<p><img src="/assets/images/python-list-references.png" alt="Article image" width="400" height="300" /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aquib.sh/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aquib.sh/" rel="alternate" type="text/html" /><updated>2025-05-01T17:57:13+00:00</updated><id>https://aquib.sh/feed.xml</id><title type="html">Aquib Shaikh</title><subtitle>Backend Engineer | .NET, Python, Go | Microservices &amp; High-Performance APIs</subtitle><author><name>Aquib Shaikh</name></author><entry><title type="html">Fixing ‘pfx is not owned by you’ Error for Red Dead Redemption 2 on Ubuntu</title><link href="https://aquib.sh/2025/05/fix-for-pfx-not-owned-by-you.html" rel="alternate" type="text/html" title="Fixing ‘pfx is not owned by you’ Error for Red Dead Redemption 2 on Ubuntu" /><published>2025-05-01T00:00:00+00:00</published><updated>2025-05-01T00:00:00+00:00</updated><id>https://aquib.sh/2025/05/fix-for-pfx-not-owned-by-you</id><content type="html" xml:base="https://aquib.sh/2025/05/fix-for-pfx-not-owned-by-you.html"><![CDATA[<p>As a Linux gamer, I recently ran into a frustrating issue while trying to play <em>Red Dead Redemption 2</em> (RDR2) on Ubuntu. The game was installed on an NTFS drive shared with my Windows setup, but when I launched it through Steam, I got this error:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wine: '/mnt/games/SteamLibrary/steamapps/compatdata/1174180/pfx' is not owned by you
+</code></pre></div></div>
+
+<p>This error happens because the Wine prefix (used by Steam’s Proton to run Windows games on Linux) has incorrect ownership, often due to the game being installed from another operating system (like Windows) or the NTFS drive’s permissions. Here’s how I fixed it to get RDR2 running on Ubuntu.</p>
+
+<h2 id="my-setup">My Setup</h2>
+<ul>
+  <li><strong>Drive 1</strong>: Windows 11 (where RDR2 was originally installed)</li>
+  <li><strong>Drive 2</strong>: NTFS drive mounted at <code class="language-plaintext highlighter-rouge">/mnt/games</code> for storing Steam games</li>
+  <li><strong>Drive 3</strong>: Ubuntu with Steam installed</li>
+  <li><strong>Game Location</strong>: <code class="language-plaintext highlighter-rouge">/mnt/games/SteamLibrary/steamapps/common/Red Dead Redemption 2</code></li>
+  <li><strong>Steam Library</strong>: Added <code class="language-plaintext highlighter-rouge">/mnt/games/SteamLibrary</code> as a library in Steam on Ubuntu</li>
+</ul>
+
+<h2 id="the-issue">The Issue</h2>
+<p>I mounted the NTFS drive on Ubuntu and added the Steam library, but launching RDR2 failed with the <code class="language-plaintext highlighter-rouge">pfx is not owned by you</code> error. The problem was that the Wine prefix directory (<code class="language-plaintext highlighter-rouge">/mnt/games/SteamLibrary/steamapps/compatdata/1174180/pfx</code>) was owned by a different user, likely from when I installed or ran the game on Windows.</p>
+
+<h2 id="the-fix">The Fix</h2>
+<p>The solution was simple: change the ownership of the Wine prefix to my Ubuntu user. Here’s what I did:</p>
+
+<h3 id="step-1-verify-the-ntfs-mount">Step 1: Verify the NTFS Mount</h3>
+<p>I ensured the NTFS drive was mounted correctly at <code class="language-plaintext highlighter-rouge">/mnt/games</code>. To check the mount, I ran:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mount | <span class="nb">grep</span> /mnt/games
+</code></pre></div></div>
+
+<p>If the drive lacks proper permissions, you can remount it with your user’s ownership. For example, assuming your username is <code class="language-plaintext highlighter-rouge">aquib</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>umount /mnt/games
+<span class="nb">sudo </span>mount <span class="nt">-t</span> ntfs <span class="nt">-o</span> <span class="nv">uid</span><span class="o">=</span>aquib,gid<span class="o">=</span>aquib,umask<span class="o">=</span>022 /dev/sdb1 /mnt/games
+</code></pre></div></div>
+
+<p>Replace <code class="language-plaintext highlighter-rouge">/dev/sdb1</code> with your NTFS drive’s device name (find it with <code class="language-plaintext highlighter-rouge">lsblk</code>).</p>
+
+<h3 id="step-2-fix-wine-prefix-ownership">Step 2: Fix Wine Prefix Ownership</h3>
+<p>The key fix was updating the ownership of the Wine prefix directory. I ran:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo chown</span> <span class="nt">-R</span> aquib:aquib /mnt/games/SteamLibrary/steamapps/compatdata/1174180
+</code></pre></div></div>
+
+<p>This command recursively sets the ownership of the Wine prefix (and its contents) to my Ubuntu user (<code class="language-plaintext highlighter-rouge">aquib</code>). After this, RDR2 launched perfectly!</p>
+
+<h2 id="extra-tips">Extra Tips</h2>
+<ul>
+  <li><strong>Proton Version</strong>: In Steam, go to <strong>Properties &gt; Compatibility</strong> for RDR2 and select a recent Proton version (e.g., Proton 9.0 or Proton Experimental) for best compatibility.</li>
+  <li><strong>Steam Library Setup</strong>: Ensure <code class="language-plaintext highlighter-rouge">/mnt/games/SteamLibrary</code> is added in **</li>
+</ul>]]></content><author><name>Aquib Shaikh</name></author><category term="technical" /><category term="personal" /><category term="Gaming" /><category term="Linux" /><category term="Technical" /><category term="red-dead-redemption-2" /><category term="ubuntu" /><category term="steam" /><category term="proton" /><category term="ntfs" /><category term="permissions" /><category term="wine" /><summary type="html"><![CDATA[A step-by-step guide to resolving the 'pfx is not owned by you' error when running Red Dead Redemption 2 on Ubuntu from an NTFS drive, focusing on Wine prefix ownership and NTFS permissions.]]></summary></entry><entry><title type="html">What Python’s [[]] * 10 Really Does: A CPython Deep Dive</title><link href="https://aquib.sh/2025/04/different-approaches-to-list-creation.html" rel="alternate" type="text/html" title="What Python’s [[]] * 10 Really Does: A CPython Deep Dive" /><published>2025-04-18T00:00:00+00:00</published><updated>2025-04-18T00:00:00+00:00</updated><id>https://aquib.sh/2025/04/different-approaches-to-list-creation</id><content type="html" xml:base="https://aquib.sh/2025/04/different-approaches-to-list-creation.html"><![CDATA[<p><img src="/assets/images/python-list-references.png" alt="Article image" width="400" height="300" /></p>
 
 <h2 id="python-list-multiplication-not-what-youd-expect">Python List Multiplication: Not What You’d Expect</h2>
 
