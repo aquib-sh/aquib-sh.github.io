@@ -957,4 +957,21 @@ h1, h2, h3, h4, h5, h6 {
   color: #4682b4;
 }
 
+.post-tags {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+.post-tags strong {
+  margin-right: 0.5rem;
+}
+.post-tags a {
+  color: #007bff;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+.post-tags a:hover {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=style.css.map */
