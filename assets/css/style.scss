@@ -381,3 +381,22 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   color: #4682b4;
 }
+.post-tags {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+
+  strong {
+    margin-right: 0.5rem;
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 0.5rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
