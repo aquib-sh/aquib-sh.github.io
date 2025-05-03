@@ -58,4 +58,4 @@ This command recursively sets the ownership of the Wine prefix (and its contents
 
 ## Extra Tips
 - **Proton Version**: In Steam, go to **Properties > Compatibility** for RDR2 and select a recent Proton version (e.g., Proton 9.0 or Proton Experimental) for best compatibility.
-- **Steam Library Setup**: Ensure `/mnt/games/SteamLibrary` is added in **
+- **Steam Library Setup**: Ensure `/mnt/games/SteamLibrary` is added in
