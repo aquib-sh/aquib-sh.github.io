@@ -2,7 +2,7 @@
 layout: post
 title: "Fix for WhatsApp PDF Warning: ‘This Document Might Be Harmful for Your Device’"
 date: 2025-04-11
-categories: [Technical, Setup]
+categories: [Fixes]
 tags: [personal, latex, productivity, overleaf, whatsapp, resume, pdf]
 permalink: /:year/:month/:title.html
 description: "If WhatsApp shows 'This document might be harmful for your device' when you send a PDF made on Overleaf, here's why I switched to a local LaTeX setup—and how you can too."

@@ -19,12 +19,11 @@ defaults:
       type: "posts"
     values:
       layout: "post"
-      categories: ["technical", "personal"]
 
 header_pages:
   - index.markdown
   - about.markdown
-  - _pages/blog.md
+  - pages/blog.markdown
 
 # Show post excerpts on blog page
 show_excerpts: true

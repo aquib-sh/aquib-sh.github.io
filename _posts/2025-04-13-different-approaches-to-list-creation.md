@@ -1,7 +1,7 @@
 ---
 title: "What Python’s [[]] * 10 Really Does: A CPython Deep Dive"
 date: 2025-04-18
-categories: [Technical, Python, Programming]
+categories: [Technical]
 tags: [python, cpython, data structures, list operations, python internals, memory management, reference counting, python pitfalls]
 permalink: /:year/:month/:title.html
 description: "A deep dive into Python's list creation mechanics: explore how multiplication creates shared references while list comprehensions create independent objects by examining the actual CPython implementation code."

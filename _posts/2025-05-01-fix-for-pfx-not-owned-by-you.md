@@ -1,7 +1,7 @@
 ---
 title: "Fixing 'pfx is not owned by you' Error for Red Dead Redemption 2 on Ubuntu"
 date: 2025-05-01
-categories: [Gaming, Linux, Technical]
+categories: [Fixes]
 tags: [red-dead-redemption-2, ubuntu, steam, proton, ntfs, permissions, wine]
 permalink: /:year/:month/:title.html
 description: "A step-by-step guide to resolving the 'pfx is not owned by you' error when running Red Dead Redemption 2 on Ubuntu from an NTFS drive, focusing on Wine prefix ownership and NTFS permissions."

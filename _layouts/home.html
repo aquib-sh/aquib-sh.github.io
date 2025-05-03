@@ -1,0 +1,225 @@
+---
+layout: default
+---
+
+<div class="home">
+  <div style="text-align: center; margin-bottom: 30px;">
+    <img src="/assets/images/aquib-photo.jpg" alt="Aquib Shaikh" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; border: 3px solid #4056A1;">
+  </div>
+  <h1 class="page-heading">Hey There!</h1>
+
+  <div class="intro-section">
+    <p>I'm a Backend Engineer from Mumbai, India, passionate about crafting scalable, high-performance systems. With expertise in <strong>.NET Core</strong>, <strong>Go</strong>, and <strong>Python</strong>, I build microservices, optimize APIs, and tackle financial infrastructure challenges—like SWIFT messaging and low-latency transactions.</p>
+
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <h3>Low-Latency APIs</h3>
+        <p>Optimizing performance for financial transactions and real-time systems.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>Microservices</h3>
+        <p>Designing resilient, distributed systems that scale with your needs.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>Database Tuning</h3>
+        <p>Speeding up queries with PostgreSQL and MongoDB optimizations.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>Cloud & Infra</h3>
+        <p>Deploying systems on AWS and Kubernetes for maximum reliability.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="connect-section">
+    <h2>Connect</h2>
+    <div class="connect-links">
+      <a href="https://linkedin.com/in/aquib-sh" class="connect-link">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/aquib-sh" class="connect-link">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="mailto:shaikhaquib394@gmail.com" class="connect-link">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+    </div>
+  </div>
+
+  <div class="blog-section">
+    <h2>Latest Posts</h2>
+    <div class="categories-grid">
+      {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
+      {% for category in all_categories %}
+        <div class="category-section">
+          <div class="category-header">
+            <h3 class="category-title">{{ category }}</h3>
+          </div>
+          <div class="category-posts">
+            <ul class="post-list">
+              {% for post in site.posts %}
+                {% if post.categories contains category %}
+                  <li>
+                    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                    <h4>
+                      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                    </h4>
+                    {% if post.description %}
+                      <p class="post-description">{{ post.description }}</p>
+                    {% endif %}
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .intro-section {
+    margin-bottom: 3rem;
+  }
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .expertise-card {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #4056A1;
+  }
+
+  .expertise-card h3 {
+    color: #4056A1;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .expertise-card p {
+    margin: 0;
+    color: #666;
+  }
+
+  .connect-section {
+    margin-bottom: 3rem;
+  }
+
+  .connect-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .connect-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    color: #4056A1;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .connect-link:hover {
+    background-color: #4056A1;
+    color: white;
+  }
+
+  .blog-section {
+    margin-bottom: 3rem;
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .category-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .category-header {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .category-title {
+    margin: 0;
+    color: #4056A1;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .category-posts {
+    padding: 1.5rem;
+  }
+
+  .post-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .post-list li {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .post-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .post-meta {
+    color: #666;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .post-link:hover {
+    color: #4056A1;
+  }
+
+  .post-description {
+    color: #666;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .expertise-grid,
+    .categories-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .connect-links {
+      flex-direction: column;
+    }
+  }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
