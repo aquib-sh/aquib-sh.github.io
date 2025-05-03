@@ -32,7 +32,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/about/" style="font-weight: 600;">About Me</a></div>
+        <div class="trigger"><a class="page-link" href="/about/" style="font-weight: 600;">About Me</a><a class="page-link" href="/blog/" style="font-weight: 600;">Blog</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -43,7 +43,7 @@
     <h1 class="post-title p-name" itemprop="name headline">What Python’s [[]] * 10 Really Does: A CPython Deep Dive</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="2025-04-18T00:00:00+00:00" itemprop="datePublished">Apr 18, 2025
-      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Aquib Shaikh</span></span></p>
+      </time>• <span class="post-categories"><a href="/categories/#technical" class="post-category">📁 Technical</a></span>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">Aquib Shaikh</span></span><div class="post-tags"><a href="/tags/#python" class="post-tag">python</a><a href="/tags/#cpython" class="post-tag">cpython</a><a href="/tags/#data-structures" class="post-tag">data structures</a><a href="/tags/#list-operations" class="post-tag">list operations</a><a href="/tags/#python-internals" class="post-tag">python internals</a><a href="/tags/#memory-management" class="post-tag">memory management</a><a href="/tags/#reference-counting" class="post-tag">reference counting</a><a href="/tags/#python-pitfalls" class="post-tag">python pitfalls</a></div></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
@@ -407,31 +407,54 @@ Here,</p>
 
 <p>Let me know what you thought about this article. Would love to know your opinions… Feel free to reach out via email.</p>
 
-  </div>
-
-  
-    <div class="post-tags">
-      <strong>Tags:</strong>
-      
-        <a href="/tags/python.html">python</a>, 
-      
-        <a href="/tags/cpython.html">cpython</a>, 
-      
-        <a href="/tags/data-structures.html">data structures</a>, 
-      
-        <a href="/tags/list-operations.html">list operations</a>, 
-      
-        <a href="/tags/python-internals.html">python internals</a>, 
-      
-        <a href="/tags/memory-management.html">memory management</a>, 
-      
-        <a href="/tags/reference-counting.html">reference counting</a>, 
-      
-        <a href="/tags/python-pitfalls.html">python pitfalls</a>
-      
-    </div>
-  <a class="u-url" href="/2025/04/different-approaches-to-list-creation.html" hidden></a>
+  </div><a class="u-url" href="/2025/04/different-approaches-to-list-creation.html" hidden></a>
 </article>
+
+<style>
+  .post-categories {
+    display: inline-flex;
+    gap: 0.5rem;
+  }
+
+  .post-category {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #f0f7ff;
+    color: #4056A1;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+  }
+
+  .post-category:hover {
+    background-color: #4056A1;
+    color: white;
+  }
+
+  .post-tags {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .post-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: #f8f9fa;
+    color: #4056A1;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+  }
+
+  .post-tag:hover {
+    background-color: #4056A1;
+    color: white;
+  }
+</style>
 
       </div>
     </main><footer class="site-footer h-card">

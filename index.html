@@ -31,65 +31,273 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/about/" style="font-weight: 600;">About Me</a></div>
+        <div class="trigger"><a class="page-link" href="/about/" style="font-weight: 600;">About Me</a><a class="page-link" href="/blog/" style="font-weight: 600;">Blog</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><style>
-  /* Custom styles for header enhancement */
-  .site-header {
-    border-top: 5px solid #4056A1;
-    border-bottom: 1px solid #e8e8e8;
-    min-height: 55px;
+        <div class="home">
+  <div style="text-align: center; margin-bottom: 30px;">
+    <img src="/assets/images/aquib-photo.jpg" alt="Aquib Shaikh" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; border: 3px solid #4056A1;">
+  </div>
+  <h1 class="page-heading">Hey There!</h1>
+
+  <div class="intro-section">
+    <p>I'm a Backend Engineer from Mumbai, India, passionate about crafting scalable, high-performance systems. With expertise in <strong>.NET Core</strong>, <strong>Go</strong>, and <strong>Python</strong>, I build microservices, optimize APIs, and tackle financial infrastructure challenges—like SWIFT messaging and low-latency transactions.</p>
+
+    <div class="expertise-grid">
+      <div class="expertise-card">
+        <h3>Low-Latency APIs</h3>
+        <p>Optimizing performance for financial transactions and real-time systems.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>Microservices</h3>
+        <p>Designing resilient, distributed systems that scale with your needs.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>Database Tuning</h3>
+        <p>Speeding up queries with PostgreSQL and MongoDB optimizations.</p>
+      </div>
+      <div class="expertise-card">
+        <h3>Cloud & Infra</h3>
+        <p>Deploying systems on AWS and Kubernetes for maximum reliability.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="connect-section">
+    <h2>Connect</h2>
+    <div class="connect-links">
+      <a href="https://linkedin.com/in/aquib-sh" class="connect-link">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+      <a href="https://github.com/aquib-sh" class="connect-link">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="mailto:shaikhaquib394@gmail.com" class="connect-link">
+        <i class="fas fa-envelope"></i> Email
+      </a>
+    </div>
+  </div>
+
+  <div class="blog-section">
+    <h2>Latest Posts</h2>
+    <div class="categories-grid">
+      
+      
+        <div class="category-section">
+          <div class="category-header">
+            <h3 class="category-title">Fixes</h3>
+          </div>
+          <div class="category-posts">
+            <ul class="post-list">
+              
+                
+                  <li>
+                    <span class="post-meta">May 1, 2025</span>
+                    <h4>
+                      <a class="post-link" href="/2025/05/fix-for-pfx-not-owned-by-you.html">Fixing &#39;pfx is not owned by you&#39; Error for Red Dead Redemption 2 on Ubuntu</a>
+                    </h4>
+                    
+                      <p class="post-description">A step-by-step guide to resolving the 'pfx is not owned by you' error when running Red Dead Redemption 2 on Ubuntu from an NTFS drive, focusing on Wine prefix ownership and NTFS permissions.</p>
+                    
+                  </li>
+                
+              
+                
+              
+                
+                  <li>
+                    <span class="post-meta">Apr 11, 2025</span>
+                    <h4>
+                      <a class="post-link" href="/2025/04/my-latex-setup.html">Fix for WhatsApp PDF Warning: ‘This Document Might Be Harmful for Your Device’</a>
+                    </h4>
+                    
+                      <p class="post-description">If WhatsApp shows 'This document might be harmful for your device' when you send a PDF made on Overleaf, here's why I switched to a local LaTeX setup—and how you can too.</p>
+                    
+                  </li>
+                
+              
+            </ul>
+          </div>
+        </div>
+      
+        <div class="category-section">
+          <div class="category-header">
+            <h3 class="category-title">Technical</h3>
+          </div>
+          <div class="category-posts">
+            <ul class="post-list">
+              
+                
+              
+                
+                  <li>
+                    <span class="post-meta">Apr 18, 2025</span>
+                    <h4>
+                      <a class="post-link" href="/2025/04/different-approaches-to-list-creation.html">What Python’s [[]] * 10 Really Does: A CPython Deep Dive</a>
+                    </h4>
+                    
+                      <p class="post-description">A deep dive into Python's list creation mechanics: explore how multiplication creates shared references while list comprehensions create independent objects by examining the actual CPython implementation code.</p>
+                    
+                  </li>
+                
+              
+                
+              
+            </ul>
+          </div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+<style>
+  .intro-section {
+    margin-bottom: 3rem;
   }
-  .site-nav .page-link:hover {
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .expertise-card {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #4056A1;
+  }
+
+  .expertise-card h3 {
     color: #4056A1;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .expertise-card p {
+    margin: 0;
+    color: #666;
+  }
+
+  .connect-section {
+    margin-bottom: 3rem;
+  }
+
+  .connect-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .connect-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    color: #4056A1;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+
+  .connect-link:hover {
+    background-color: #4056A1;
+    color: white;
+  }
+
+  .blog-section {
+    margin-bottom: 3rem;
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .category-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+
+  .category-header {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .category-title {
+    margin: 0;
+    color: #4056A1;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .category-posts {
+    padding: 1.5rem;
+  }
+
+  .post-list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .post-list li {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #eee;
+  }
+
+  .post-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .post-meta {
+    color: #666;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  .post-link:hover {
+    color: #4056A1;
+  }
+
+  .post-description {
+    color: #666;
+    margin-top: 0.5rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .expertise-grid,
+    .categories-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .connect-links {
+      flex-direction: column;
+    }
   }
 </style>
 
-<div style="text-align: center; margin-bottom: 30px;">
-  <img src="/assets/images/aquib-photo.jpg" alt="Aquib Shaikh" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; border: 3px solid #4056A1;" />
-</div>
-<h1 id="hey-there">Hey There!</h1>
-
-<p>I’m a Backend Engineer from Mumbai, India, passionate about crafting scalable, high-performance systems. With expertise in <strong>.NET Core</strong>, <strong>Go</strong>, and <strong>Python</strong>, I build microservices, optimize APIs, and tackle financial infrastructure challenges—like SWIFT messaging and low-latency transactions.</p>
-
-<p>Curious about my work? <a href="/about/">Dive into my experience and skills</a> or check out my <a href="/blog/">blog</a>.</p>
-
-<h2 id="connect">Connect</h2>
-<ul>
-  <li><a href="https://linkedin.com/in/aquib-sh">LinkedIn</a></li>
-  <li><a href="https://github.com/aquib-sh">GitHub</a></li>
-  <li><a href="mailto:shaikhaquib394@gmail.com">Email</a></li>
-</ul>
-<h2 class="post-list-heading">Posts</h2>
-    <ul class="post-list"><li><span class="post-meta">May 1, 2025</span>
-        <h3>
-          <a class="post-link" href="/2025/05/fix-for-pfx-not-owned-by-you.html">
-            Fixing &#39;pfx is not owned by you&#39; Error for Red Dead Redemption 2 on Ubuntu
-          </a>
-        </h3><p>As a Linux gamer, I recently ran into a frustrating issue while trying to play <em>Red Dead Redemption 2</em> (RDR2) on Ubuntu. The game was installed on an NTFS drive shared with my Windows setup, but when I launched it through Steam, I got this error:</p>
-</li><li><span class="post-meta">Apr 18, 2025</span>
-        <h3>
-          <a class="post-link" href="/2025/04/different-approaches-to-list-creation.html">
-            What Python’s [[]] * 10 Really Does: A CPython Deep Dive
-          </a>
-        </h3><p><img src="/assets/images/python-list-references.png" alt="Article image" width="400" height="300" /></p>
-</li><li><span class="post-meta">Apr 11, 2025</span>
-        <h3>
-          <a class="post-link" href="/2025/04/my-latex-setup.html">
-            Fix for WhatsApp PDF Warning: ‘This Document Might Be Harmful for Your Device’
-          </a>
-        </h3><p>We all love LaTeX (at least I do!).<br />
-It helps me create and edit my resume without making a mess.<br />
-What’s better? I can maintain it in Git—create branches, roll back if needed—way better than fiddling with Word documents.<br />
-I can even send it to GPT for a review.
-in.</p>
-</li></ul>
-
-    <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p></div>
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/"></data>
