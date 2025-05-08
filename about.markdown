@@ -192,11 +192,39 @@ permalink: /about/
         <div class="interests-container">
           <div class="interests-text">
             <ul class="interests-list">
-              <li>🏃‍♂️ <strong>Trekking Adventures:</strong> Exploring the Western Ghats and seeking new peaks to conquer</li>
-              <li>📸 <strong>Photography:</strong> Capturing nature's beauty during my adventures</li>
-              <li>🐧 <strong>Open Source:</strong> Contributing to and learning from the Linux community</li>
-              <li>🌟 <strong>Tech Community:</strong> Sharing knowledge and helping others grow</li>
+              <li class="interest-item">
+                <span class="interest-icon">🏃‍♂️</span>
+                <div class="interest-content">
+                  <strong>Trekking Adventures</strong>
+                  <p>Exploring the Western Ghats and seeking new peaks to conquer</p>
+                </div>
+              </li>
+              <li class="interest-item">
+                <span class="interest-icon">📸</span>
+                <div class="interest-content">
+                  <strong>Photography</strong>
+                  <p>Capturing nature's beauty during my adventures</p>
+                </div>
+              </li>
+              <li class="interest-item">
+                <span class="interest-icon">🐧</span>
+                <div class="interest-content">
+                  <strong>Open Source</strong>
+                  <p>Contributing to and learning from the Linux community</p>
+                </div>
+              </li>
+              <li class="interest-item">
+                <span class="interest-icon">🌟</span>
+                <div class="interest-content">
+                  <strong>Tech Community</strong>
+                  <p>Sharing knowledge and helping others grow</p>
+                </div>
+              </li>
             </ul>
+          </div>
+          
+          <div class="photo-gallery">
+            <img src="/assets/images/IMG_3502.jpg" alt="Trekking Adventure" class="gallery-img">
           </div>
         </div>
 
@@ -204,12 +232,12 @@ permalink: /about/
           <div class="photo-gallery">
             <div class="gallery-row">
               <div class="gallery-item">
-                <img src="/assets/images/IMG_20240707_100916232_HDR.jpg" alt="Trekking Adventure" class="gallery-img">
-                <div class="photo-caption">Morning view from the peak</div>
+                <img src="/assets/images/IMG_20240707_144336329_HDR.jpg" alt="Trekking Adventure" class="gallery-img">
+                <div class="photo-caption">Exploring the trails</div>
               </div>
               <div class="gallery-item">
                 <img src="/assets/images/IMG_20240707_120555884_HDR.jpg" alt="Trekking Adventure 2" class="gallery-img">
-                <div class="photo-caption">Exploring the trails</div>
+                <div class="photo-caption">Morning view from the peak</div>
               </div>
             </div>
             <div class="gallery-row">
@@ -219,7 +247,7 @@ permalink: /about/
               </div>
               <div class="gallery-item">
                 <img src="/assets/images/IMG_20241228_130915859.jpg" alt="Trekking Adventure 3" class="gallery-img">
-                <div class="photo-caption">Scenic mountain views</div>
+                <div class="photo-caption">Squad</div>
               </div>
             </div>
           </div>
@@ -486,11 +514,44 @@ permalink: /about/
   .interests-list {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
 
-  .interests-list li {
-    margin-bottom: 1rem;
+  .interest-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+
+  .interest-item:hover {
+    transform: translateX(5px);
+  }
+
+  .interest-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+  }
+
+  .interest-content {
+    flex-grow: 1;
+  }
+
+  .interest-content strong {
+    display: block;
+    color: #4056A1;
+    margin-bottom: 0.3rem;
     font-size: 1.1rem;
+  }
+
+  .interest-content p {
+    margin: 0;
+    color: #666;
+    line-height: 1.5;
   }
 
   .photo-gallery {
@@ -682,6 +743,10 @@ permalink: /about/
 
     .expertise-card h3 {
       font-size: 1.2rem;
+    }
+
+    .interest-item {
+      padding: 0.8rem;
     }
   }
 
