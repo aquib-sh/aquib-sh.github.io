@@ -3,63 +3,69 @@ layout: default
 ---
 
 <div class="home">
-  <div style="text-align: center; margin-bottom: 30px;">
-    <img src="/assets/images/aquib-photo.jpg" alt="Aquib Shaikh" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; border: 3px solid #4056A1;">
+  <div class="profile-photo-container">
+    <img src="/assets/images/aquib-photo.jpg" alt="Aquib Shaikh" class="profile-photo">
   </div>
-  <h1 class="page-heading">Hey There!</h1>
-
-  <div class="intro-section">
-    <p>I'm a Backend Engineer from Mumbai, India, passionate about crafting scalable, high-performance systems. With expertise in <strong>.NET Core</strong>, <strong>Go</strong>, and <strong>Python</strong>, I build microservices, optimize APIs, and tackle financial infrastructure challenges—like SWIFT messaging and low-latency transactions.</p>
-
-    <div class="expertise-grid">
-      <div class="expertise-card">
-        <h3>Low-Latency APIs</h3>
-        <p>Optimizing performance for financial transactions and real-time systems.</p>
-      </div>
-      <div class="expertise-card">
-        <h3>Microservices</h3>
-        <p>Designing resilient, distributed systems that scale with your needs.</p>
-      </div>
-      <div class="expertise-card">
-        <h3>Database Tuning</h3>
-        <p>Speeding up queries with PostgreSQL and MongoDB optimizations.</p>
-      </div>
-      <div class="expertise-card">
-        <h3>Cloud & Infra</h3>
-        <p>Deploying systems on AWS and Kubernetes for maximum reliability.</p>
-      </div>
+  <div class="intro-content">
+    <div class="intro-header">
+      <h1 class="intro-title">Hi, I'm Aquib Shaikh</h1>
+      <p class="intro-subtitle">Software Engineer & Linux Enthusiast</p>
+    </div>
+    <div class="intro-text-container">
+      <p class="intro-text">I'm a software engineer working at Mirae Asset Capital Markets, where I get to work with SWIFT protocol systems. Think of it like UPI or PayPal, but for financial institutions that move millions of dollars globally. The cool part is that SWIFT doesn't actually transfer money - it just transmits instructions between banks.</p>
+      
+      <p class="intro-text">I've done my fair share of different things - 3 years of freelancing where I completed around 200 projects, multiple internships, and even worked as a founding engineer at a startup where I built the entire product from scratch. Each experience was unique and taught me something valuable.</p>
+      
+      <p class="intro-text">While I work with C# (.NET Core) in my current role, Python is where my heart lies. That's where I built my programming foundation, and during my freelancing journey from 2020-2023, I did tons of projects in Python - web scraping, automation, scripting, ETL, GUI/CLI tools, you name it. The best part was getting to work with people from dozens of countries - it really broadened my perspective.</p>
+      
+      <p class="intro-text">And Linux... I'm a total nerd when it comes to it. I can't count how many times my Linux tinkering has helped me in my work. Whether it's server deployments or understanding how computers work at a deeper level, Linux has changed how I think about technology. My love for programming and Linux go hand in hand - they're both about understanding and building complex systems.</p>
     </div>
   </div>
+</div>
 
-  <div class="connect-section">
-    <h2>Connect</h2>
-    <div class="connect-links">
-      <a href="https://linkedin.com/in/aquib-sh" class="connect-link">
-        <i class="fab fa-linkedin"></i> LinkedIn
-      </a>
-      <a href="https://github.com/aquib-sh" class="connect-link">
-        <i class="fab fa-github"></i> GitHub
-      </a>
-      <a href="mailto:shaikhaquib394@gmail.com" class="connect-link">
-        <i class="fas fa-envelope"></i> Email
-      </a>
-    </div>
+<div class="connect-section">
+  <h2 class="section-title">Connect</h2>
+  <div class="connect-links">
+    <a href="https://linkedin.com/in/aquib-sh" class="connect-link">
+      <i class="fab fa-linkedin"></i> LinkedIn
+    </a>
+    <a href="https://github.com/aquib-sh" class="connect-link">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+    <a href="mailto:shaikhaquib394@gmail.com" class="connect-link">
+      <i class="fas fa-envelope"></i> Email
+    </a>
   </div>
+</div>
 
-  <div class="blog-section">
-    <h2>Latest Posts</h2>
-    <div class="categories-grid">
-      {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort %}
-      {% for category in all_categories %}
-        <div class="category-section">
-          <div class="category-header">
-            <h3 class="category-title">{{ category }}</h3>
-          </div>
-          <div class="category-posts">
-            <ul class="post-list">
-              {% for post in site.posts %}
-                {% if post.categories contains category %}
-                  <li>
+<div class="blog-section">
+  <h2 class="section-title">Latest Posts</h2>
+  <div class="categories-container">
+    {% assign all_categories = site.posts | map: 'categories' | flatten | uniq | sort | reverse %}
+    {% for category in all_categories %}
+      <div class="category-section">
+        <div class="category-header">
+          <h3 class="category-title">{{ category }}</h3>
+        </div>
+        <div class="category-posts">
+          <ul class="post-list">
+            {% assign category_posts = site.posts | where_exp: "post", "post.categories contains category" %}
+            {% for post in category_posts limit: 3 %}
+              <li>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <h4>
+                  <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                </h4>
+                {% if post.description %}
+                  <p class="post-description">{{ post.description }}</p>
+                {% endif %}
+              </li>
+            {% endfor %}
+            {% assign remaining_posts = category_posts.size | minus: 3 %}
+            {% if remaining_posts > 0 %}
+              <div class="more-posts-container">
+                {% for post in category_posts offset: 3 %}
+                  <li class="hidden-post">
                     <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
                     <h4>
                       <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
@@ -68,48 +74,131 @@ layout: default
                       <p class="post-description">{{ post.description }}</p>
                     {% endif %}
                   </li>
-                {% endif %}
-              {% endfor %}
-            </ul>
-          </div>
+                {% endfor %}
+              </div>
+              <button class="view-more-btn" onclick="toggleMorePosts(this)">
+                View {{ remaining_posts }} more posts
+              </button>
+            {% endif %}
+          </ul>
         </div>
-      {% endfor %}
-    </div>
+      </div>
+    {% endfor %}
   </div>
 </div>
 
 <style>
-  .intro-section {
+  .home {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .profile-photo-container {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding: 1rem;
+  }
+
+  .profile-photo {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .profile-photo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  }
+
+  .intro-content {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     margin-bottom: 3rem;
   }
 
-  .expertise-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin-top: 2rem;
+  .intro-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
   }
 
-  .expertise-card {
-    background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-radius: 8px;
-    border-left: 4px solid #4056A1;
-  }
-
-  .expertise-card h3 {
+  .intro-title {
     color: #4056A1;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
   }
 
-  .expertise-card p {
-    margin: 0;
+  .intro-subtitle {
     color: #666;
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 500;
+  }
+
+  .intro-text-container {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+  }
+
+  .intro-text::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    width: 3px;
+    background: linear-gradient(to bottom, #4056A1, #6c8eef);
+    border-radius: 3px;
+    opacity: 0.5;
+  }
+
+  .intro-text:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-title {
+    color: #4056A1;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, #4056A1, #6c8eef);
+    border-radius: 2px;
   }
 
   .connect-section {
     margin-bottom: 3rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   }
 
   .connect-links {
@@ -124,45 +213,63 @@ layout: default
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
     background-color: #f8f9fa;
-    border-radius: 4px;
+    border-radius: 8px;
     color: #4056A1;
     text-decoration: none;
     transition: all 0.3s;
+    font-size: 1rem;
+    font-weight: 500;
   }
 
   .connect-link:hover {
     background-color: #4056A1;
     color: white;
+    transform: translateY(-2px);
   }
 
   .blog-section {
     margin-bottom: 3rem;
   }
 
-  .categories-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+  .categories-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .category-section {
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     overflow: hidden;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .category-section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
   }
 
   .category-header {
     background-color: #f8f9fa;
-    padding: 1.5rem;
-    border-bottom: 1px solid #eee;
+    padding: 1.25rem;
+    border-bottom: 2px solid #4056A1;
   }
 
   .category-title {
     margin: 0;
     color: #4056A1;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .category-title::before {
+    content: "📁";
+    font-size: 1.1rem;
   }
 
   .category-posts {
@@ -172,11 +279,12 @@ layout: default
   .post-list {
     list-style: none;
     padding-left: 0;
+    margin: 0;
   }
 
   .post-list li {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 1.25rem;
     border-bottom: 1px solid #eee;
   }
 
@@ -190,14 +298,16 @@ layout: default
     color: #666;
     font-size: 0.9rem;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
   }
 
   .post-link {
-    color: #333;
+    color: #2c3e50;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
+    line-height: 1.4;
+    transition: color 0.3s;
   }
 
   .post-link:hover {
@@ -206,20 +316,85 @@ layout: default
 
   .post-description {
     color: #666;
-    margin-top: 0.5rem;
+    margin-top: 0.4rem;
     line-height: 1.5;
+    font-size: 0.95rem;
+  }
+
+  .view-more-btn {
+    background-color: #4056A1;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s;
+  }
+
+  .view-more-btn:hover {
+    background-color: #334a8a;
+    transform: translateY(-2px);
+  }
+
+  .view-more-btn.collapsed {
+    background-color: #6c757d;
   }
 
   @media (max-width: 768px) {
-    .expertise-grid,
-    .categories-grid {
-      grid-template-columns: 1fr;
+    .home {
+      padding: 1rem;
+    }
+
+    .intro-content {
+      padding: 1.5rem;
     }
 
     .connect-links {
       flex-direction: column;
     }
+
+    .connect-link {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+    }
+
+    .intro-title {
+      font-size: 1.8rem;
+    }
+
+    .intro-subtitle {
+      font-size: 1.1rem;
+    }
+
+    .intro-text {
+      font-size: 1rem;
+      padding-left: 1.2rem;
+    }
   }
 </style>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+<script>
+function toggleMorePosts(button) {
+  const container = button.previousElementSibling;
+  const isExpanded = container.classList.contains('expanded');
+  
+  if (isExpanded) {
+    container.classList.remove('expanded');
+    button.textContent = button.textContent.replace('View less', 'View');
+    button.classList.remove('collapsed');
+  } else {
+    container.classList.add('expanded');
+    button.textContent = button.textContent.replace('View', 'View less');
+    button.classList.add('collapsed');
+  }
+}
+</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
