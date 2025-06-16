@@ -8,6 +8,7 @@ description: "We will create our own HTTP server from scratch using raw TCP sock
 author: Aquib Shaikh 
 toc: true
 comments: true
+pin: true
 ---
 
 Note: source code for this entire project can be found on my GitHub [repository](https://github.com/aquib-sh/simple-http-server)
@@ -310,8 +311,12 @@ These headers can include other information like:
 These headers can be anything. After all they are just a `:` colon separated key and value pairs.
 
 ### HTTP Message Anatomy
+<!-- 
+![Standard HTTP Request Response](https://mdn.github.io/shared-assets/images/diagrams/http/messages/http-message-anatomy.svg) -->
 
-![Standard HTTP Request Response](https://mdn.github.io/shared-assets/images/diagrams/http/messages/http-message-anatomy.svg)
+<div style="background: #eaeaea; padding: 0.5em; border-radius: 8px; display: inline-block;">
+  <img src="https://mdn.github.io/shared-assets/images/diagrams/http/messages/http-message-anatomy.svg" alt="Standard HTTP Request Response" style="max-width: 100%; height: auto;">
+</div>
 
 #### Request Structure
 

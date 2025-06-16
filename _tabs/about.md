@@ -4,7 +4,9 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-![Aquib Shaikh](/assets/images/aquib-photo.jpg){: .w-50 .rounded .mx-auto .d-block }
+<div style="text-align:center">
+  <img src="/assets/images/aquib-photo.jpg" alt="Aquib Shaikh" class="w-50 rounded d-block" style="margin:auto;" />
+</div>
 
 # Aquib Shaikh  
 _Backend Engineer | Financial Systems Specialist | Cloud Architect_
@@ -105,14 +107,28 @@ When I'm not coding, here's what I'm up to:
 
 ### Trekking Gallery
 
-<p align="center">
-  <img src="/assets/images/IMG_3502.jpg" alt="Trekking Adventure" width="350" />
-  <br><em>Exploring the Western Ghats</em>
-</p>
+<!-- <table style="width:100%; border: none;">
+  <tr>
+    <td align="center" style="vertical-align:top; border:none; width:50%;">
+      <div style="height: 510px; display: flex; flex-direction: column; justify-content: flex-start; align-items: center;">
+        <img src="/assets/images/IMG_20240707_144336329_HDR.jpg" alt="Trekking Adventure" width="350" style="max-height:430px; object-fit:cover;" />
+        <br><em>Trails</em>
+      </div>
+    </td>
+    <td align="center" style="vertical-align:top; border:none; width:50%;">
+      <div style="height: 510px; display: flex; flex-direction: column; justify-content: flex-start; align-items: center;">
+        <img src="/assets/images/IMG_3502.jpg" alt="Trekking Adventure" width="350" style="max-height:430px; object-fit:cover;" />
+        <br><em>Exploring Sahyadri</em>
+      </div>
+    </td>
+  </tr>
+</table> -->
 
-| ![Exploring the trails](/assets/images/IMG_20240707_144336329_HDR.jpg){: width="220" } <br> <sub>Exploring the trails</sub> | ![Morning view from the peak](/assets/images/IMG_20240707_120555884_HDR.jpg){: width="350" } <br> <sub>Morning view from the peak</sub> |
+| ![Trails](/assets/images/IMG_20240707_144336329_HDR.jpg){: width="450" } <br> <sub>Trails</sub> | ![Morning view from the peak](/assets/images/IMG_3502.jpg){: width="450" } <br> <sub>Exploring Sahyadri</sub> |
 |:---:|:---:|
-| ![Night camping under the stars](/assets/images/IMG_20241228_225212023.NIGHT.jpg){: width="220" } <br> <sub>Night camping under the stars</sub> | ![Squad](/assets/images/IMG_20241228_130915859.jpg){: width="220" } <br> <sub>Squad</sub> |
+| ![Exploring the trails](/assets/images/tandulwadi.jpg){: width="450" } <br> <sub>Well, this needs no caption</sub> | ![Morning view from the peak](/assets/images/IMG_20240707_120555884_HDR.jpg){: width="450" } <br> <sub>Morning view from the peak</sub> |
+|:---:|:---:|
+| ![Night camping under the stars](/assets/images/IMG_20241228_225212023.NIGHT.jpg){: width="450" } <br> <sub>Night camping under the stars</sub> | ![Squad](/assets/images/IMG_20241228_130915859.jpg){: width="450" } <br> <sub>Squad</sub> |
 
 ### Featured Adventure: Sondai Trek
 

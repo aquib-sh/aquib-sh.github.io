@@ -8,6 +8,7 @@ description: "A deep dive into Python's list creation mechanics: explore how mul
 author: Aquib Shaikh 
 toc: true
 comments: true
+pin: true
 ---
 
 <img src="/assets/images/python-list-references.png" alt="Article image" width="400" height="300" />
