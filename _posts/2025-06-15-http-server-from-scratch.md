@@ -286,7 +286,7 @@ Don't bother trying too hard to understand everything now - the concepts will be
 
 When you run the code in your terminal, you should see output similar to this:
 
-![Server Running](server_running_chapter1.png)
+![Server Running](/assets/http_server_scratch/server_running_chapter1.png)
 
 This confirms that your server is running and listening on port `9000` as expected. You can test it by opening your browser and navigating to `http://localhost:9000` - you should see "Hello World" displayed on the page.
 
@@ -1377,7 +1377,7 @@ if __name__ == "__main__":
 
 When you run the server, you'll see:
 
-![Server Running](server_running_chapter1.png)
+![Server Running](/assets/http_server_scratch/server_running_chapter1.png)
 
 This indicates the server is listening on port 8000. As clients connect, their addresses will be printed, helping you debug incoming requests.
 
