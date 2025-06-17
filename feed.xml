@@ -1,474 +1,143 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://aquib.sh/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aquib.sh/" rel="alternate" type="text/html" /><updated>2025-06-14T18:04:04+00:00</updated><id>https://aquib.sh/feed.xml</id><title type="html">Aquib Shaikh</title><subtitle>Backend Engineer | .NET, Python, Go | Microservices &amp; High-Performance APIs</subtitle><author><name>Aquib Shaikh</name></author><entry><title type="html">Fixing ‘pfx is not owned by you’ Error for Red Dead Redemption 2 on Ubuntu</title><link href="https://aquib.sh/2025/05/fix-for-pfx-not-owned-by-you.html" rel="alternate" type="text/html" title="Fixing ‘pfx is not owned by you’ Error for Red Dead Redemption 2 on Ubuntu" /><published>2025-05-01T00:00:00+00:00</published><updated>2025-05-01T00:00:00+00:00</updated><id>https://aquib.sh/2025/05/fix-for-pfx-not-owned-by-you</id><content type="html" xml:base="https://aquib.sh/2025/05/fix-for-pfx-not-owned-by-you.html"><![CDATA[<p>As a Linux gamer, I recently ran into a frustrating issue while trying to play <em>Red Dead Redemption 2</em> (RDR2) on Ubuntu. The game was installed on an NTFS drive shared with my Windows setup, but when I launched it through Steam, I got this error:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wine: '/mnt/games/SteamLibrary/steamapps/compatdata/1174180/pfx' is not owned by you
-</code></pre></div></div>
 
-<p>This error happens because the Wine prefix (used by Steam’s Proton to run Windows games on Linux) has incorrect ownership, often due to the game being installed from another operating system (like Windows) or the NTFS drive’s permissions. Here’s how I fixed it to get RDR2 running on Ubuntu.</p>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://aquib.sh/</id>
+  <title>Aquib Shaikh</title>
+  <subtitle>Tech enthusiast and backend engineer unraveling complex systems and sharing adventure and stories.</subtitle>
+  <updated>2025-06-17T04:26:32+00:00</updated>
+  <author>
+    <name>Aquib Shaikh</name>
+    <uri>https://aquib.sh/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="https://aquib.sh/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="https://aquib.sh/"/>
+  <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
+  <rights> © 2025 Aquib Shaikh </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Creating your own HTTP Server from scratch using Python</title>
+    <link href="https://aquib.sh/2025/06/http-server-from-scratch.html" rel="alternate" type="text/html" title="Creating your own HTTP Server from scratch using Python" />
+    <published>2025-06-15T00:00:00+00:00</published>
+  
+    <updated>2025-06-15T00:00:00+00:00</updated>
+  
+    <id>https://aquib.sh/2025/06/http-server-from-scratch.html</id>
+    <content type="text/html" src="https://aquib.sh/2025/06/http-server-from-scratch.html" />
+    <author>
+      <name>Aquib Shaikh</name>
+    </author>
+
+  
+    
+    <category term="Technical" />
+    
+  
+
+  <summary>We will create our own HTTP server from scratch using raw TCP sockets in Python, super fun and interesting to know how things work under the hood. I will demystify the working of HTTP</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>How to Fix Oracle Database Errors: ORA-12514, ORA-01034, and ORA-03113</title>
+    <link href="https://aquib.sh/2025/05/how-to-fix-oracle-connection-error.html" rel="alternate" type="text/html" title="How to Fix Oracle Database Errors: ORA-12514, ORA-01034, and ORA-03113" />
+    <published>2025-05-07T00:00:00+00:00</published>
+  
+    <updated>2025-05-07T00:00:00+00:00</updated>
+  
+    <id>https://aquib.sh/2025/05/how-to-fix-oracle-connection-error.html</id>
+    <content type="text/html" src="https://aquib.sh/2025/05/how-to-fix-oracle-connection-error.html" />
+    <author>
+      <name>Aquib Shaikh</name>
+    </author>
+
+  
+    
+    <category term="Fixes" />
+    
+  
+
+  <summary>A step-by-step guide to resolving the &amp;#39;pfx is not owned by you&amp;#39; error when running Red Dead Redemption 2 on Ubuntu from an NTFS drive, focusing on Wine prefix ownership and NTFS permissions.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>Fixing 'pfx is not owned by you' Error for Red Dead Redemption 2 on Ubuntu</title>
+    <link href="https://aquib.sh/2025/05/fix-for-pfx-not-owned-by-you.html" rel="alternate" type="text/html" title="Fixing &amp;apos;pfx is not owned by you&amp;apos; Error for Red Dead Redemption 2 on Ubuntu" />
+    <published>2025-05-01T00:00:00+00:00</published>
+  
+    <updated>2025-05-01T00:00:00+00:00</updated>
+  
+    <id>https://aquib.sh/2025/05/fix-for-pfx-not-owned-by-you.html</id>
+    <content type="text/html" src="https://aquib.sh/2025/05/fix-for-pfx-not-owned-by-you.html" />
+    <author>
+      <name>Aquib Shaikh</name>
+    </author>
+
+  
+    
+    <category term="Fixes" />
+    
+  
+
+  <summary>A step-by-step guide to resolving the &amp;#39;pfx is not owned by you&amp;#39; error when running Red Dead Redemption 2 on Ubuntu from an NTFS drive, focusing on Wine prefix ownership and NTFS permissions.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>I wish I was a network packet...</title>
+    <link href="https://aquib.sh/posts/thoughts-network-packets/" rel="alternate" type="text/html" title="I wish I was a network packet..." />
+    <published>2025-04-18T00:00:00+00:00</published>
+  
+    <updated>2025-04-18T00:00:00+00:00</updated>
+  
+    <id>https://aquib.sh/posts/thoughts-network-packets/</id>
+    <content type="text/html" src="https://aquib.sh/posts/thoughts-network-packets/" />
+    <author>
+      <name>Aquib Shaikh</name>
+    </author>
+
+  
+    
+    <category term="Raw Thoughts" />
+    
+  
+
+  <summary>travelling around the globe in milliseconds, hopping through dozens of routers. Travelling in the wire, under the ocean, up into the air like a ripple.</summary>
+
+  </entry>
+
+  
+  <entry>
+    <title>What Python’s [[]] * 10 Really Does: A CPython Deep Dive</title>
+    <link href="https://aquib.sh/2025/04/different-approaches-to-list-creation.html" rel="alternate" type="text/html" title="What Python’s [[]] * 10 Really Does: A CPython Deep Dive" />
+    <published>2025-04-18T00:00:00+00:00</published>
+  
+    <updated>2025-04-18T00:00:00+00:00</updated>
+  
+    <id>https://aquib.sh/2025/04/different-approaches-to-list-creation.html</id>
+    <content type="text/html" src="https://aquib.sh/2025/04/different-approaches-to-list-creation.html" />
+    <author>
+      <name>Aquib Shaikh</name>
+    </author>
+
+  
+    
+    <category term="Technical" />
+    
+  
+
+  <summary>A deep dive into Python&amp;#39;s list creation mechanics: explore how multiplication creates shared references while list comprehensions create independent objects by examining the actual CPython implementation code.</summary>
+
+  </entry>
+
+</feed>
 
-<h2 id="my-setup">My Setup</h2>
-<ul>
-  <li><strong>Drive 1</strong>: Windows 11 (where RDR2 was originally installed)</li>
-  <li><strong>Drive 2</strong>: NTFS drive mounted at <code class="language-plaintext highlighter-rouge">/mnt/games</code> for storing Steam games</li>
-  <li><strong>Drive 3</strong>: Ubuntu with Steam installed</li>
-  <li><strong>Game Location</strong>: <code class="language-plaintext highlighter-rouge">/mnt/games/SteamLibrary/steamapps/common/Red Dead Redemption 2</code></li>
-  <li><strong>Steam Library</strong>: Added <code class="language-plaintext highlighter-rouge">/mnt/games/SteamLibrary</code> as a library in Steam on Ubuntu</li>
-</ul>
 
-<h2 id="the-issue">The Issue</h2>
-<p>I mounted the NTFS drive on Ubuntu and added the Steam library, but launching RDR2 failed with the <code class="language-plaintext highlighter-rouge">pfx is not owned by you</code> error. The problem was that the Wine prefix directory (<code class="language-plaintext highlighter-rouge">/mnt/games/SteamLibrary/steamapps/compatdata/1174180/pfx</code>) was owned by a different user, likely from when I installed or ran the game on Windows.</p>
-
-<h2 id="the-fix">The Fix</h2>
-<p>The solution was simple: change the ownership of the Wine prefix to my Ubuntu user. Here’s what I did:</p>
-
-<h3 id="step-1-verify-the-ntfs-mount">Step 1: Verify the NTFS Mount</h3>
-<p>I ensured the NTFS drive was mounted correctly at <code class="language-plaintext highlighter-rouge">/mnt/games</code>. To check the mount, I ran:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>mount | <span class="nb">grep</span> /mnt/games
-</code></pre></div></div>
-
-<p>If the drive lacks proper permissions, you can remount it with your user’s ownership. For example, assuming your username is <code class="language-plaintext highlighter-rouge">aquib</code>:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>umount /mnt/games
-<span class="nb">sudo </span>mount <span class="nt">-t</span> ntfs <span class="nt">-o</span> <span class="nv">uid</span><span class="o">=</span>aquib,gid<span class="o">=</span>aquib,umask<span class="o">=</span>022 /dev/sdb1 /mnt/games
-</code></pre></div></div>
-
-<p>Replace <code class="language-plaintext highlighter-rouge">/dev/sdb1</code> with your NTFS drive’s device name (find it with <code class="language-plaintext highlighter-rouge">lsblk</code>).</p>
-
-<h3 id="step-2-fix-wine-prefix-ownership">Step 2: Fix Wine Prefix Ownership</h3>
-<p>The key fix was updating the ownership of the Wine prefix directory. I ran:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo chown</span> <span class="nt">-R</span> aquib:aquib /mnt/games/SteamLibrary/steamapps/compatdata/1174180
-</code></pre></div></div>
-
-<p>This command recursively sets the ownership of the Wine prefix (and its contents) to my Ubuntu user (<code class="language-plaintext highlighter-rouge">aquib</code>). After this, RDR2 launched perfectly!</p>
-
-<h2 id="extra-tips">Extra Tips</h2>
-<ul>
-  <li><strong>Proton Version</strong>: In Steam, go to <strong>Properties &gt; Compatibility</strong> for RDR2 and select a recent Proton version (e.g., Proton 9.0 or Proton Experimental) for best compatibility.</li>
-  <li><strong>Steam Library Setup</strong>: Ensure <code class="language-plaintext highlighter-rouge">/mnt/games/SteamLibrary</code> is added in</li>
-</ul>]]></content><author><name>Aquib Shaikh</name></author><category term="Fixes" /><category term="red-dead-redemption-2" /><category term="ubuntu" /><category term="steam" /><category term="proton" /><category term="ntfs" /><category term="permissions" /><category term="wine" /><summary type="html"><![CDATA[A step-by-step guide to resolving the 'pfx is not owned by you' error when running Red Dead Redemption 2 on Ubuntu from an NTFS drive, focusing on Wine prefix ownership and NTFS permissions.]]></summary></entry><entry><title type="html">What Python’s [[]] * 10 Really Does: A CPython Deep Dive</title><link href="https://aquib.sh/2025/04/different-approaches-to-list-creation.html" rel="alternate" type="text/html" title="What Python’s [[]] * 10 Really Does: A CPython Deep Dive" /><published>2025-04-18T00:00:00+00:00</published><updated>2025-04-18T00:00:00+00:00</updated><id>https://aquib.sh/2025/04/different-approaches-to-list-creation</id><content type="html" xml:base="https://aquib.sh/2025/04/different-approaches-to-list-creation.html"><![CDATA[<p><img src="/assets/images/python-list-references.png" alt="Article image" width="400" height="300" /></p>
-
-<h2 id="python-list-multiplication-not-what-youd-expect">Python List Multiplication: Not What You’d Expect</h2>
-
-<p>I have a habit of avoiding syntactic sugars of Python unless absolutely necessary or if I’m feeling lazy! It’s not like I have a bad opinion of them. I think some of them are highly optimized which could help you leverage the unique features and efficiency of Python where it matters.</p>
-
-<p>Recently I was writing a script where I decided to use this syntactic sugar of Python which I assumed would create a list of lists. Well, to be fair, it does… just not in the way I expected.</p>
-
-<h2 id="expected-vs-actual-results">Expected vs. Actual Results</h2>
-
-<p>Let’s look at this seemingly innocent piece of code:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">list_of_lists</span> <span class="o">=</span> <span class="p">[[]]</span> <span class="o">*</span> <span class="mi">10</span>
-<span class="n">list_of_lists</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">append</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="nf">print</span><span class="p">(</span><span class="n">list_of_lists</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h3 id="what-i-expected">What I Expected</h3>
-
-<p>I assumed that the above code would result in the first sublist having a single element appended to it like:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]]</span>
-</code></pre></div></div>
-
-<h3 id="what-actually-happened">What Actually Happened</h3>
-
-<p>But to my surprise, it resulted in this:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span><span class="p">]]</span>
-</code></pre></div></div>
-
-<p>Well, it was in a subroutine which was doing many other things, so it took me a while, but it was not long before I figured out that all of these lists pointed to a single memory address. As verified by the following:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="n">register</span> <span class="o">=</span> <span class="p">[[]]</span> <span class="o">*</span> <span class="mi">10</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-<span class="p">...</span>     <span class="nf">print</span><span class="p">(</span><span class="nf">id</span><span class="p">(</span><span class="n">register</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
-<span class="bp">...</span>
-<span class="mi">1728395547200</span>
-<span class="mi">1728395547200</span>
-<span class="mi">1728395547200</span>
-<span class="mi">1728395547200</span>
-<span class="mi">1728395547200</span>
-<span class="mi">1728395547200</span>
-<span class="mi">1728395547200</span>
-<span class="mi">1728395547200</span>
-<span class="mi">1728395547200</span>
-<span class="mi">1728395547200</span>
-</code></pre></div></div>
-
-<p>It all made sense, but I had this itch to see how it was really implemented under the hood. So I did what any productivity guru and pragmatic person would tell you to do:<br /> 
-Checkout the Python Interpreter Source Code 😤</p>
-
-<h2 id="diving-into-the-cpython-codebase">Diving into the CPython Codebase</h2>
-
-<p>I headed over to the <a href="https://github.com/python/cpython">cpython repo</a> on GitHub to investigate how list multiplication actually works.</p>
-
-<p>In CPython, there are two methods in <code class="language-plaintext highlighter-rouge">listobject.c</code> that are responsible for creating the list when you write the list multiplication syntax like <code class="language-plaintext highlighter-rouge">[[]] * 10</code>.</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-<span class="nf">list_repeat_lock_held</span><span class="p">(</span><span class="n">PyListObject</span> <span class="o">*</span><span class="n">a</span><span class="p">,</span> <span class="n">Py_ssize_t</span> <span class="n">n</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">const</span> <span class="n">Py_ssize_t</span> <span class="n">input_size</span> <span class="o">=</span> <span class="n">Py_SIZE</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">input_size</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">PyList_New</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-    <span class="n">assert</span><span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">);</span>
-
-    <span class="k">if</span> <span class="p">(</span><span class="n">input_size</span> <span class="o">&gt;</span> <span class="n">PY_SSIZE_T_MAX</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">PyErr_NoMemory</span><span class="p">();</span>
-    <span class="n">Py_ssize_t</span> <span class="n">output_size</span> <span class="o">=</span> <span class="n">input_size</span> <span class="o">*</span> <span class="n">n</span><span class="p">;</span>
-
-    <span class="n">PyListObject</span> <span class="o">*</span><span class="n">np</span> <span class="o">=</span> <span class="p">(</span><span class="n">PyListObject</span> <span class="o">*</span><span class="p">)</span> <span class="n">list_new_prealloc</span><span class="p">(</span><span class="n">output_size</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">np</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
-        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
-
-    <span class="n">PyObject</span> <span class="o">**</span><span class="n">dest</span> <span class="o">=</span> <span class="n">np</span><span class="o">-&gt;</span><span class="n">ob_item</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">input_size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">PyObject</span> <span class="o">*</span><span class="n">elem</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">ob_item</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-        <span class="n">_Py_RefcntAdd</span><span class="p">(</span><span class="n">elem</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
-        <span class="n">PyObject</span> <span class="o">**</span><span class="n">dest_end</span> <span class="o">=</span> <span class="n">dest</span> <span class="o">+</span> <span class="n">output_size</span><span class="p">;</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">dest</span> <span class="o">&lt;</span> <span class="n">dest_end</span><span class="p">)</span> <span class="p">{</span>
-            <span class="o">*</span><span class="n">dest</span><span class="o">++</span> <span class="o">=</span> <span class="n">elem</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-    <span class="k">else</span> <span class="p">{</span>
-        <span class="n">PyObject</span> <span class="o">**</span><span class="n">src</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">ob_item</span><span class="p">;</span>
-        <span class="n">PyObject</span> <span class="o">**</span><span class="n">src_end</span> <span class="o">=</span> <span class="n">src</span> <span class="o">+</span> <span class="n">input_size</span><span class="p">;</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">src</span> <span class="o">&lt;</span> <span class="n">src_end</span><span class="p">)</span> <span class="p">{</span>
-            <span class="n">_Py_RefcntAdd</span><span class="p">(</span><span class="o">*</span><span class="n">src</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
-            <span class="o">*</span><span class="n">dest</span><span class="o">++</span> <span class="o">=</span> <span class="o">*</span><span class="n">src</span><span class="o">++</span><span class="p">;</span>
-        <span class="p">}</span>
-        <span class="c1">// TODO: _Py_memory_repeat calls are not safe for shared lists in</span>
-        <span class="c1">// GIL_DISABLED builds. (See issue #129069)</span>
-        <span class="n">_Py_memory_repeat</span><span class="p">((</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">np</span><span class="o">-&gt;</span><span class="n">ob_item</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="p">)</span><span class="o">*</span><span class="n">output_size</span><span class="p">,</span>
-                                        <span class="k">sizeof</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="p">)</span><span class="o">*</span><span class="n">input_size</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="n">Py_SET_SIZE</span><span class="p">(</span><span class="n">np</span><span class="p">,</span> <span class="n">output_size</span><span class="p">);</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="p">)</span> <span class="n">np</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-<span class="nf">list_repeat</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="n">aa</span><span class="p">,</span> <span class="n">Py_ssize_t</span> <span class="n">n</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">PyObject</span> <span class="o">*</span><span class="n">ret</span><span class="p">;</span>
-    <span class="n">PyListObject</span> <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">PyListObject</span> <span class="o">*</span><span class="p">)</span><span class="n">aa</span><span class="p">;</span>
-    <span class="n">Py_BEGIN_CRITICAL_SECTION</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
-    <span class="n">ret</span> <span class="o">=</span> <span class="n">list_repeat_lock_held</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
-    <span class="n">Py_END_CRITICAL_SECTION</span><span class="p">();</span>
-    <span class="k">return</span> <span class="n">ret</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="breaking-down-the-implementation">Breaking Down the Implementation</h2>
-
-<p>Okay, enough of Egyptian Hieroglyphics, let’s come to the point. What is it actually doing?</p>
-
-<p>When evaluating <code class="language-plaintext highlighter-rouge">[[]] * 10</code>, the <code class="language-plaintext highlighter-rouge">list_repeat</code> function is called.
-Here,</p>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">PyObject *aa</code> = <code class="language-plaintext highlighter-rouge">[[]]</code> (our list containing one empty list)</li>
-  <li><code class="language-plaintext highlighter-rouge">Py_ssize_t n</code> = 10 (our multiplier)</li>
-</ul>
-
-<p>First, we initialize our return value and typecast the input:</p>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PyObject</span> <span class="o">*</span><span class="n">ret</span><span class="p">;</span>
-<span class="n">PyListObject</span> <span class="o">*</span><span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">PyListObject</span> <span class="o">*</span><span class="p">)</span><span class="n">aa</span><span class="p">;</span>
-</code></pre></div></div>
-<ul>
-  <li>This declares a new <code class="language-plaintext highlighter-rouge">PyObject</code> for returning</li>
-  <li>Creates a <code class="language-plaintext highlighter-rouge">PyListObject</code> and typecasts the existing <code class="language-plaintext highlighter-rouge">*aa</code> parameter to <code class="language-plaintext highlighter-rouge">PyListObject</code></li>
-</ul>
-
-<p>Next, we call the actual implementation:</p>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ret</span> <span class="o">=</span> <span class="n">list_repeat_lock_held</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
-</code></pre></div></div>
-
-<h2 id="inside-the-list_repeat_lock_held-function">Inside the list_repeat_lock_held Function</h2>
-
-<h3 id="initial-checks-and-memory-allocation">Initial Checks and Memory Allocation</h3>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">const</span> <span class="n">Py_ssize_t</span> <span class="n">input_size</span> <span class="o">=</span> <span class="n">Py_SIZE</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">input_size</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nf">PyList_New</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-<span class="n">assert</span><span class="p">(</span><span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>First, we determine the size of our input list. If the size is 0 or the multiplier is less than or equal to zero, we just return an empty list.</p>
-
-<p>This means if you had performed <code class="language-plaintext highlighter-rouge">[] * 10</code> or <code class="language-plaintext highlighter-rouge">[[]] * 0</code> or <code class="language-plaintext highlighter-rouge">[[]] * -29</code>, the result would be <code class="language-plaintext highlighter-rouge">[]</code>.</p>
-
-<p>Let’s verify:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[]</span> <span class="o">*</span> <span class="mi">10</span>
-<span class="p">[]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">[[]]</span> <span class="o">*</span> <span class="mi">0</span>
-<span class="p">[]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">[[]]</span> <span class="o">*</span> <span class="o">-</span><span class="mi">29</span>
-<span class="p">[]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">[]</span> <span class="o">*</span> <span class="mi">0</span>
-<span class="p">[]</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="p">[]</span> <span class="o">*</span> <span class="o">-</span><span class="mi">9888</span>
-<span class="p">[]</span>
-</code></pre></div></div>
-
-<p>Indeed, we get a single newly created Python list of length 0!</p>
-
-<p>Next, we have a defensive check to prevent integer overflow:</p>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="n">input_size</span> <span class="o">&gt;</span> <span class="n">PY_SSIZE_T_MAX</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nf">PyErr_NoMemory</span><span class="p">();</span>
-<span class="n">Py_ssize_t</span> <span class="n">output_size</span> <span class="o">=</span> <span class="n">input_size</span> <span class="o">*</span> <span class="n">n</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>Here, <code class="language-plaintext highlighter-rouge">PY_SSIZE_T_MAX</code> is the max value of a <code class="language-plaintext highlighter-rouge">long int</code>, which is typically 9223372036854775807 on a 64-bit machine.</p>
-
-<p>The same is accesible through <code class="language-plaintext highlighter-rouge">sys.maxsize</code> in Python.</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="n">sys</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">sys</span><span class="p">.</span><span class="n">maxsize</span>
-<span class="mi">9223372036854775807</span>
-</code></pre></div></div>
-
-<p>After our defensive check, now it’s time to allocate memory for our new list object:</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PyListObject</span> <span class="o">*</span><span class="n">np</span> <span class="o">=</span> <span class="p">(</span><span class="n">PyListObject</span> <span class="o">*</span><span class="p">)</span> <span class="n">list_new_prealloc</span><span class="p">(</span><span class="n">output_size</span><span class="p">);</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">np</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span>
-    <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
-</code></pre></div></div>
-
-<p>The <code class="language-plaintext highlighter-rouge">list_new_prealloc</code> function might return NULL if our <code class="language-plaintext highlighter-rouge">output_size</code> is negative:</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">static</span> <span class="n">PyObject</span> <span class="o">*</span>
-<span class="nf">list_new_prealloc</span><span class="p">(</span><span class="n">Py_ssize_t</span> <span class="n">size</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">assert</span><span class="p">(</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">);</span>
-    <span class="n">PyListObject</span> <span class="o">*</span><span class="n">op</span> <span class="o">=</span> <span class="p">(</span><span class="n">PyListObject</span> <span class="o">*</span><span class="p">)</span> <span class="n">PyList_New</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">op</span> <span class="o">==</span> <span class="nb">NULL</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="p">...</span>
-<span class="p">}</span>
-
-<span class="n">PyObject</span> <span class="o">*</span>
-<span class="nf">PyList_New</span><span class="p">(</span><span class="n">Py_ssize_t</span> <span class="n">size</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">size</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">PyErr_BadInternalCall</span><span class="p">();</span>
-        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="p">...</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h2 id="the-critical-part-how-python-copies-the-references">The Critical Part: How Python Copies the References</h2>
-
-<p>Now we come to the main part where the list is actually made and returned to the user:</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PyObject</span> <span class="o">**</span><span class="n">dest</span> <span class="o">=</span> <span class="n">np</span><span class="o">-&gt;</span><span class="n">ob_item</span><span class="p">;</span>
-<span class="k">if</span> <span class="p">(</span><span class="n">input_size</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Single element list case</span>
-    <span class="n">PyObject</span> <span class="o">*</span><span class="n">elem</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">ob_item</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-    <span class="n">_Py_RefcntAdd</span><span class="p">(</span><span class="n">elem</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
-    <span class="n">PyObject</span> <span class="o">**</span><span class="n">dest_end</span> <span class="o">=</span> <span class="n">dest</span> <span class="o">+</span> <span class="n">output_size</span><span class="p">;</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">dest</span> <span class="o">&lt;</span> <span class="n">dest_end</span><span class="p">)</span> <span class="p">{</span>
-        <span class="o">*</span><span class="n">dest</span><span class="o">++</span> <span class="o">=</span> <span class="n">elem</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="k">else</span> <span class="p">{</span>
-    <span class="c1">// Multi-element list case</span>
-    <span class="p">...</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<h3 id="the-single-element-list-case-our---10-example">The Single Element List Case (Our [[]] * 10 Example)</h3>
-
-<p>Since our list <code class="language-plaintext highlighter-rouge">[[]]</code> has only one element (which is the empty list <code class="language-plaintext highlighter-rouge">[]</code>), we enter the <code class="language-plaintext highlighter-rouge">input_size == 1</code> branch:</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PyObject</span> <span class="o">*</span><span class="n">elem</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">ob_item</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
-<span class="n">_Py_RefcntAdd</span><span class="p">(</span><span class="n">elem</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
-<span class="n">PyObject</span> <span class="o">**</span><span class="n">dest_end</span> <span class="o">=</span> <span class="n">dest</span> <span class="o">+</span> <span class="n">output_size</span><span class="p">;</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">dest</span> <span class="o">&lt;</span> <span class="n">dest_end</span><span class="p">)</span> <span class="p">{</span>
-    <span class="o">*</span><span class="n">dest</span><span class="o">++</span> <span class="o">=</span> <span class="n">elem</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>Let’s break down what’s happening:</p>
-
-<ol>
-  <li>We select the first element of the list: <code class="language-plaintext highlighter-rouge">elem = a-&gt;ob_item[0]</code> (this is our <code class="language-plaintext highlighter-rouge">[]</code> empty list)</li>
-  <li>We increase the reference count of this element by n (10 in our case): <code class="language-plaintext highlighter-rouge">_Py_RefcntAdd(elem, n)</code></li>
-  <li>We calculate the end pointer for our destination array: <code class="language-plaintext highlighter-rouge">dest_end = dest + output_size</code></li>
-  <li>We run a simple loop that copies the <strong>same reference</strong> to each position in our new list</li>
-</ol>
-
-<p>This is the key insight! The function doesn’t create 10 new empty lists - it creates one new list with 10 slots, and puts <strong>the same empty list reference</strong> in each slot!</p>
-
-<h2 id="pythons-reference-counting-system">Python’s Reference Counting System</h2>
-
-<p>Let’s take a small detour to understand reference counting in Python, as it’s crucial to understanding what’s happening here.</p>
-
-<p>In Python, every object (PyObject) internally has an unsigned 32-bit integer property <code class="language-plaintext highlighter-rouge">ob_refcnt</code> to track how many references are tied to this particular object.</p>
-
-<p>For example, if I have an object <code class="language-plaintext highlighter-rouge">snow_bell</code> of <code class="language-plaintext highlighter-rouge">Cat</code> class:</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;&gt;&gt;</span> <span class="k">class</span> <span class="nc">Cat</span><span class="p">:</span>
-<span class="p">...</span>     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-<span class="p">...</span>         <span class="n">self</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-<span class="bp">...</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">snow_bell</span> <span class="o">=</span> <span class="nc">Cat</span><span class="p">(</span><span class="sh">"</span><span class="s">Snow Bell</span><span class="sh">"</span><span class="p">)</span>
-
-<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="n">sys</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="n">sys</span><span class="p">.</span><span class="nf">getrefcount</span><span class="p">(</span><span class="n">snow_bell</span><span class="p">)</span>
-<span class="mi">2</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">sys.getrefcount</code> shows us the internal reference count of an object. It says <code class="language-plaintext highlighter-rouge">2</code> because:</p>
-<ol>
-  <li>We have the reference <code class="language-plaintext highlighter-rouge">snow_bell</code> variable</li>
-  <li>The <code class="language-plaintext highlighter-rouge">getrefcount</code> function itself creates a temporary reference to the object</li>
-</ol>
-
-<p>When the reference count reaches <code class="language-plaintext highlighter-rouge">0</code>, the object is garbage collected.</p>
-
-<blockquote>
-  <p><strong>Did you know?</strong></p>
-
-  <p>In Python, some objects are <em>immortal</em> — they’re never garbage collected. This includes <code class="language-plaintext highlighter-rouge">None</code>, <code class="language-plaintext highlighter-rouge">True</code>, and <code class="language-plaintext highlighter-rouge">False</code>. Interestingly, under certain conditions, even a seemingly ordinary object can become immortal.</p>
-
-  <p>If you’re curious, check out the source code of <code class="language-plaintext highlighter-rouge">_Py_RefcntAdd</code> to dig deeper. But that’s a topic for another article.</p>
-</blockquote>
-
-<h2 id="back-to-our-list-multiplication">Back to Our List Multiplication</h2>
-
-<p>So when we run <code class="language-plaintext highlighter-rouge">[[]] * 10</code>, what happens is:</p>
-<ol>
-  <li>We create one empty list <code class="language-plaintext highlighter-rouge">[]</code></li>
-  <li>We put that same list reference in 10 different slots of our new list</li>
-  <li>When we modify <code class="language-plaintext highlighter-rouge">list_of_lists[0]</code>, we’re modifying the same list object that all 10 slots refer to!</li>
-</ol>
-
-<h2 id="the-multi-element-list-case">The Multi-Element List Case</h2>
-
-<p>For completeness, let’s examine what happens with multiple elements. For example, <code class="language-plaintext highlighter-rouge">[[10], [20]] * 10</code>:</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PyObject</span> <span class="o">**</span><span class="n">src</span> <span class="o">=</span> <span class="n">a</span><span class="o">-&gt;</span><span class="n">ob_item</span><span class="p">;</span>
-<span class="n">PyObject</span> <span class="o">**</span><span class="n">src_end</span> <span class="o">=</span> <span class="n">src</span> <span class="o">+</span> <span class="n">input_size</span><span class="p">;</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">src</span> <span class="o">&lt;</span> <span class="n">src_end</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">_Py_RefcntAdd</span><span class="p">(</span><span class="o">*</span><span class="n">src</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
-    <span class="o">*</span><span class="n">dest</span><span class="o">++</span> <span class="o">=</span> <span class="o">*</span><span class="n">src</span><span class="o">++</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="n">_Py_memory_repeat</span><span class="p">((</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="n">np</span><span class="o">-&gt;</span><span class="n">ob_item</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="p">)</span><span class="o">*</span><span class="n">output_size</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">PyObject</span> <span class="o">*</span><span class="p">)</span><span class="o">*</span><span class="n">input_size</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>In this case:</p>
-<ol>
-  <li>The function first copies references to <code class="language-plaintext highlighter-rouge">[10]</code> and <code class="language-plaintext highlighter-rouge">[20]</code> into the first two slots of our new list</li>
-  <li>It then uses <code class="language-plaintext highlighter-rouge">_Py_memory_repeat</code> to efficiently duplicate these references throughout the rest of the list</li>
-</ol>
-
-<p>The <code class="language-plaintext highlighter-rouge">_Py_memory_repeat</code> function is particularly clever - it doubles the copied region in each iteration, making it logarithmically efficient:</p>
-
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">static</span> <span class="kr">inline</span> <span class="kt">void</span>
-<span class="nf">_Py_memory_repeat</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span> <span class="n">dest</span><span class="p">,</span> <span class="n">Py_ssize_t</span> <span class="n">len_dest</span><span class="p">,</span> <span class="n">Py_ssize_t</span> <span class="n">len_src</span><span class="p">)</span>
-<span class="p">{</span>
-    <span class="n">assert</span><span class="p">(</span><span class="n">len_src</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">);</span>
-    <span class="n">Py_ssize_t</span> <span class="n">copied</span> <span class="o">=</span> <span class="n">len_src</span><span class="p">;</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">copied</span> <span class="o">&lt;</span> <span class="n">len_dest</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">Py_ssize_t</span> <span class="n">bytes_to_copy</span> <span class="o">=</span> <span class="n">Py_MIN</span><span class="p">(</span><span class="n">copied</span><span class="p">,</span> <span class="n">len_dest</span> <span class="o">-</span> <span class="n">copied</span><span class="p">);</span>
-        <span class="n">memcpy</span><span class="p">(</span><span class="n">dest</span> <span class="o">+</span> <span class="n">copied</span><span class="p">,</span> <span class="n">dest</span><span class="p">,</span> <span class="p">(</span><span class="kt">size_t</span><span class="p">)</span><span class="n">bytes_to_copy</span><span class="p">);</span>
-        <span class="n">copied</span> <span class="o">+=</span> <span class="n">bytes_to_copy</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-<ol>
-  <li>
-    <p>The variable <code class="language-plaintext highlighter-rouge">copied</code> tracks how many bytes of repeated content have already been written. It starts at <code class="language-plaintext highlighter-rouge">len_src</code>, the length of the original pattern.</p>
-  </li>
-  <li>
-    <p><code class="language-plaintext highlighter-rouge">bytes_to_copy</code> is calculated using <code class="language-plaintext highlighter-rouge">Py_MIN(copied, len_dest - copied)</code>. Ideally, you’d like to double the data by copying <code class="language-plaintext highlighter-rouge">copied</code> bytes, but if that would go beyond the destination buffer, it’s capped at the remaining space.</p>
-  </li>
-  <li>
-    <p>The actual copying happens with <code class="language-plaintext highlighter-rouge">memcpy(dest + copied, dest, bytes_to_copy)</code>. This means you’re copying from the beginning of <code class="language-plaintext highlighter-rouge">dest</code> (which already contains some repeated pattern) and appending it to the end of the currently copied region. This effectively doubles the region that now holds the repeated content.</p>
-  </li>
-  <li>
-    <p>After copying, <code class="language-plaintext highlighter-rouge">copied</code> is incremented by <code class="language-plaintext highlighter-rouge">bytes_to_copy</code>, and the loop continues until the entire buffer is filled.</p>
-  </li>
-</ol>
-
-<p>This approach is clever because it builds on the already-copied data. Instead of repeatedly copying from the original source, it uses the growing buffer itself to continue the repetition. The number of copied bytes grows like this: <code class="language-plaintext highlighter-rouge">len_src -&gt; 2*len_src -&gt; 4*len_src -&gt; ...</code>, until the full destination length is reached.</p>
-
-<h2 id="so-what-about--for-_-in-range10">So What About [[] for _ in range(10)]?</h2>
-
-<p>In case you’re wondering why I didn’t touch on the <code class="language-plaintext highlighter-rouge">[[] for _ in range(10)]</code> approach - well, when I started writing this article, I kept digging deeper and deeper into the amazing mechanics of the Python interpreter. It was as much of an adventure for me as it has been for you!</p>
-
-<p>I realized that the article is already too long, so our list comprehension approach deserves its own separate article. The key difference though? In list comprehension, each iteration creates a NEW empty list, rather than referencing the same one multiple times.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>So there you have it - a deep dive into how Python’s list multiplication works under the hood. The next time you use <code class="language-plaintext highlighter-rouge">[[]] * 10</code>, you’ll know exactly what’s happening and why modifying one sublist affects all of them!</p>
-
-<p>Enjoy your Coffee ☕</p>
-
-<p>Let me know what you thought about this article. Would love to know your opinions… Feel free to reach out via email.</p>]]></content><author><name>Aquib Shaikh</name></author><category term="Technical" /><category term="python" /><category term="cpython" /><category term="data structures" /><category term="list operations" /><category term="python internals" /><category term="memory management" /><category term="reference counting" /><category term="python pitfalls" /><summary type="html"><![CDATA[A deep dive into Python's list creation mechanics: explore how multiplication creates shared references while list comprehensions create independent objects by examining the actual CPython implementation code.]]></summary></entry><entry><title type="html">I wish I was a network packet…</title><link href="https://aquib.sh/raw%20thoughts/2025/04/18/thoughts-network-packets.html" rel="alternate" type="text/html" title="I wish I was a network packet…" /><published>2025-04-18T00:00:00+00:00</published><updated>2025-04-18T00:00:00+00:00</updated><id>https://aquib.sh/raw%20thoughts/2025/04/18/thoughts-network-packets</id><content type="html" xml:base="https://aquib.sh/raw%20thoughts/2025/04/18/thoughts-network-packets.html"><![CDATA[<p>I wish I was a network packet, travelling around the globe in milliseconds,
-hopping through dozens of routers. 
-Travelling over the wire, under the ocean, up into the air like a ripple.</p>
-
-<p>Do we ever take back a moment and ponder on how amazing this is!
-Internet is truly a marvel of human civilization, the single greatest invention.</p>
-
-<p>People complain why did humans stopped building marvelous cathedrals and mahals and buildings. 
-I say we are still building, but this age we build systems. Systems that are platform of collectively thought and expression for billions of people around us.</p>
-
-<p>In what other age could you talk to another human sitting 10,000 km away from you, hear and see them live as it happens (well there is are delay, maybe not truly live but you get the point..!)</p>]]></content><author><name>Aquib Shaikh</name></author><category term="Raw Thoughts" /><summary type="html"><![CDATA[travelling around the globe in milliseconds, hopping through dozens of routers. Travelling in the wire, under the ocean, up into the air like a ripple.]]></summary></entry><entry><title type="html">Fix for WhatsApp PDF Warning: ‘This Document Might Be Harmful for Your Device’</title><link href="https://aquib.sh/2025/04/my-latex-setup.html" rel="alternate" type="text/html" title="Fix for WhatsApp PDF Warning: ‘This Document Might Be Harmful for Your Device’" /><published>2025-04-11T00:00:00+00:00</published><updated>2025-04-11T00:00:00+00:00</updated><id>https://aquib.sh/2025/04/my-latex-setup</id><content type="html" xml:base="https://aquib.sh/2025/04/my-latex-setup.html"><![CDATA[<p>We all love LaTeX (at least I do!).<br />
-It helps me create and edit my resume without making a mess.<br />
-What’s better? I can maintain it in Git—create branches, roll back if needed—way better than fiddling with Word documents.<br />
-I can even send it to GPT for a review.
-in.</p>
-
-<p>Have you ever sent a PDF via WhatsApp and seen this warning?</p>
-
-<blockquote>
-  <p><strong>This document might be harmful for your device. Make sure you trust the sender before you open it.</strong></p>
-</blockquote>
-
-<p>This happened to me when I sent my resume, generated on <strong>Overleaf</strong>, to a hiring manager. It was a clean file—no malware, no scripts—but WhatsApp flagged it anyway.<br />
-Apparently, Overleaf PDFs trigger something in WhatsApp’s automated filters.</p>
-
-<p>I found a temporary workaround using Google Docs, but it wasn’t a clean or dependable fix for this. That’s when I decided to move away from Overleaf and build a local LaTeX setup that wouldn’t trigger warnings—and would give me more control in the long run.</p>
-
-<p><strong>In this post, I’ll share my LaTeX setup and how switching to a local compiler solved the issue.</strong></p>
-
-<hr />
-<p><br /></p>
-
-<h2 id="my-local-latex-setup-ubuntu">My Local LaTeX Setup (Ubuntu)</h2>
-
-<p>I use <strong>Ubuntu</strong>, so the commands and package names below might vary depending on your OS or distro.<br />
-Here’s what I use:</p>
-
-<ul>
-  <li><strong>LaTeX Engine</strong>: <code class="language-plaintext highlighter-rouge">texlive-full</code> with <code class="language-plaintext highlighter-rouge">pdflatex</code></li>
-  <li><strong>Editor</strong>: Mostly <strong>VIM</strong>, sometimes <strong>VS Code</strong> with the <em>LaTeX Workshop</em> extension</li>
-</ul>
-
-<hr />
-<p><br /></p>
-
-<h2 id="installation">Installation</h2>
-
-<p>There are many packages available for compiling LaTeX to PDF, but I found this one to be the most reliable and comprehensive.<br />
-Other minimal packages often miss important dependencies like color packages, styles, and fonts—which you’ll likely need anyway.</p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>texlive-full pdflatex
-</code></pre></div></div>
-
-<blockquote>
-  <p>⚠️ <strong>Note:</strong> This package is big—around a gigabyte—but it’ll save you a ton of headache later by including everything you might need.</p>
-</blockquote>
-
-<hr />
-<p><br /></p>
-
-<h2 id="usage">Usage</h2>
-
-<p>To compile a <code class="language-plaintext highlighter-rouge">.tex</code> file to PDF, use the command below:</p>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pdflatex filename.tex
-</code></pre></div></div>
-<p>This command creates a filename.pdf and a .log file with detailed output.
-Unlike the Overleaf version, this locally compiled PDF no longer triggers WhatsApp’s “This document might be harmful” warning. 🎉</p>]]></content><author><name>Aquib Shaikh</name></author><category term="Fixes" /><category term="personal" /><category term="latex" /><category term="productivity" /><category term="overleaf" /><category term="whatsapp" /><category term="resume" /><category term="pdf" /><summary type="html"><![CDATA[If WhatsApp shows 'This document might be harmful for your device' when you send a PDF made on Overleaf, here's why I switched to a local LaTeX setup—and how you can too.]]></summary></entry></feed>
