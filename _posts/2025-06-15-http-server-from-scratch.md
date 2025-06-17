@@ -5,7 +5,7 @@ categories: [Technical]
 tags: [python, http, networking, sockets]
 permalink: /:year/:month/:title.html
 description: "We will create our own HTTP server from scratch using raw TCP sockets in Python, super fun and interesting to know how things work under the hood. I will demystify the working of HTTP"
-author: Aquib Shaikh 
+author: aquib_shaikh 
 toc: true
 comments: true
 pin: true
