@@ -9,6 +9,7 @@ author: aquib_shaikh
 toc: true
 comments: true
 pin: true
+image: /assets/http_server_scratch/thumbnail.png
 ---
 
 Note: source code for this entire project can be found on my GitHub [repository](https://github.com/aquib-sh/simple-http-server)

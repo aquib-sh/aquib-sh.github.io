@@ -9,9 +9,10 @@ author: Aquib Shaikh
 toc: true
 comments: true
 pin: true
+image: /assets/images/python-list-references.png
 ---
-
-<img src="/assets/images/python-list-references.png" alt="Article image" width="400" height="300" />
+<!-- 
+<img src="/assets/images/python-list-references.png" alt="Article image" width="400" height="300" /> -->
 
 ## Python List Multiplication: Not What You'd Expect
 
