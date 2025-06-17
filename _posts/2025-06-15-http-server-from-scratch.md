@@ -379,7 +379,7 @@ class HttpMethodType(Enum):
 Create a class primarily for storing the data related to request in a single object, you could go without doing any of these fancy stuff but this helps keep the code cleaner and saves you time and energy if you wanted to expand the project further.
 
 ```python
-class HttpRequest:repo
+class HttpRequest:
     def __init__(self, method_type: HttpMethodType, path: str, protocol: str, headers:dict, payload=None):
         self.method = method_type
         self.path = path
