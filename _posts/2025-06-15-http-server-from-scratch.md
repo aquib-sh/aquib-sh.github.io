@@ -10,6 +10,14 @@ toc: true
 comments: true
 pin: true
 image: /assets/http_server_scratch/thumbnail.png
+
+
+# Open Graph tags
+og:title: "Creating your own HTTP Server from scratch using Python"
+og:description: "Learn how to build an HTTP server from scratch in Python using raw TCP sockets. Demystify HTTP and networking fundamentals."
+og:type: article
+og:url: "https://aquib.sh/2025/06/creating-your-own-http-server-from-scratch-using-python.html"
+og:image: "https://aquib.sh/assets/http_server_scratch/thumbnail.png"
 ---
 
 Note: source code for this entire project can be found on my GitHub [repository](https://github.com/aquib-sh/simple-http-server)

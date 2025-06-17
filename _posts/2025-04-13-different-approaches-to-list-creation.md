@@ -10,7 +10,19 @@ toc: true
 comments: true
 pin: true
 image: /assets/images/python-list-references.png
+
+
+# Open Graph tags
+og:title: "What Python’s [[]] * 10 Really Does: A CPython Deep Dive"
+og:description: "Explore how Python list multiplication creates shared references, while list comprehensions create independent objects, by examining the actual CPython implementation."
+og:type: article
+og:url: "https://aquib.sh/2025/04/what-pythons-list-multiplication-really-does.html"
+
+og:image: "https://aquib.sh/assets/images/python-list-references.png"
 ---
+
+
+
 <!-- 
 <img src="/assets/images/python-list-references.png" alt="Article image" width="400" height="300" /> -->
 
