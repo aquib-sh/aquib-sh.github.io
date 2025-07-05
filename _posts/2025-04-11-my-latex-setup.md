@@ -1,5 +1,4 @@
 ---
-layout: post
 title: "Fix for WhatsApp PDF Warning: ‘This Document Might Be Harmful for Your Device’"
 date: 2025-04-11
 categories: [Fixes]
