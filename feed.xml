@@ -4,7 +4,7 @@
   <id>https://aquib.sh/</id>
   <title>Aquib Shaikh</title>
   <subtitle>Tech enthusiast and backend engineer unraveling complex systems and sharing adventure and stories.</subtitle>
-  <updated>2025-06-17T08:29:47+00:00</updated>
+  <updated>2025-07-05T17:43:45+00:00</updated>
   <author>
     <name>Aquib Shaikh</name>
     <uri>https://aquib.sh/</uri>
@@ -17,6 +17,30 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>A vounteer based archive of everything in this world.</title>
+    <link href="https://aquib.sh/2025/07/record-keeper.html" rel="alternate" type="text/html" title="A vounteer based archive of everything in this world." />
+    <published>2025-07-05T00:00:00+00:00</published>
+  
+    <updated>2025-07-05T00:00:00+00:00</updated>
+  
+    <id>https://aquib.sh/2025/07/record-keeper.html</id>
+    <content type="text/html" src="https://aquib.sh/2025/07/record-keeper.html" />
+    <author>
+      <name>aquib_shaikh</name>
+    </author>
+
+  
+    
+    <category term="Raw Thoughts" />
+    
+  
+
+  <summary>Archive for real world</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +135,6 @@
   
 
   <summary>travelling around the globe in milliseconds, hopping through dozens of routers. Travelling in the wire, under the ocean, up into the air like a ripple.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>What Python’s [[]] * 10 Really Does: A CPython Deep Dive</title>
-    <link href="https://aquib.sh/2025/04/different-approaches-to-list-creation.html" rel="alternate" type="text/html" title="What Python’s [[]] * 10 Really Does: A CPython Deep Dive" />
-    <published>2025-04-18T00:00:00+00:00</published>
-  
-    <updated>2025-04-18T00:00:00+00:00</updated>
-  
-    <id>https://aquib.sh/2025/04/different-approaches-to-list-creation.html</id>
-    <content type="text/html" src="https://aquib.sh/2025/04/different-approaches-to-list-creation.html" />
-    <author>
-      <name>Aquib Shaikh</name>
-    </author>
-
-  
-    
-    <category term="Technical" />
-    
-  
-
-  <summary>A deep dive into Python&amp;#39;s list creation mechanics: explore how multiplication creates shared references while list comprehensions create independent objects by examining the actual CPython implementation code.</summary>
 
   </entry>
 
