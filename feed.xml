@@ -4,7 +4,7 @@
   <id>https://aquib.sh/</id>
   <title>Aquib Shaikh</title>
   <subtitle>Tech enthusiast and backend engineer unraveling complex systems and sharing adventure and stories.</subtitle>
-  <updated>2025-07-05T17:43:45+00:00</updated>
+  <updated>2025-07-31T18:30:25+00:00</updated>
   <author>
     <name>Aquib Shaikh</name>
     <uri>https://aquib.sh/</uri>
@@ -17,6 +17,32 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Origin of Money, Banks and Currency Notes</title>
+    <link href="https://aquib.sh/2025/07/money-explained-1.html" rel="alternate" type="text/html" title="Origin of Money, Banks and Currency Notes" />
+    <published>2025-07-31T00:00:00+00:00</published>
+  
+    <updated>2025-07-31T00:00:00+00:00</updated>
+  
+    <id>https://aquib.sh/2025/07/money-explained-1.html</id>
+    <content type="text/html" src="https://aquib.sh/2025/07/money-explained-1.html" />
+    <author>
+      <name>aquib_shaikh</name>
+    </author>
+
+  
+    
+    <category term="Economics" />
+    
+    <category term="Finance" />
+    
+  
+
+  <summary>A personal journey through the evolution of money - from simple barter systems to modern currency notes. Explore how coins, banks, and paper money solved the scalability issues of trading goods for goods.</summary>
+
+  </entry>
 
   
   <entry>
@@ -111,30 +137,6 @@
   
 
   <summary>A step-by-step guide to resolving the &amp;#39;pfx is not owned by you&amp;#39; error when running Red Dead Redemption 2 on Ubuntu from an NTFS drive, focusing on Wine prefix ownership and NTFS permissions.</summary>
-
-  </entry>
-
-  
-  <entry>
-    <title>I wish I was a network packet...</title>
-    <link href="https://aquib.sh/posts/thoughts-network-packets/" rel="alternate" type="text/html" title="I wish I was a network packet..." />
-    <published>2025-04-18T00:00:00+00:00</published>
-  
-    <updated>2025-04-18T00:00:00+00:00</updated>
-  
-    <id>https://aquib.sh/posts/thoughts-network-packets/</id>
-    <content type="text/html" src="https://aquib.sh/posts/thoughts-network-packets/" />
-    <author>
-      <name>Aquib Shaikh</name>
-    </author>
-
-  
-    
-    <category term="Raw Thoughts" />
-    
-  
-
-  <summary>travelling around the globe in milliseconds, hopping through dozens of routers. Travelling in the wire, under the ocean, up into the air like a ripple.</summary>
 
   </entry>
 
